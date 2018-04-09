@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D74547DF2075BEEE007BE40D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D74547DE2075BEEE007BE40D /* main.m */; };
+		D74547E22075BEEE007BE40D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D74547E12075BEEE007BE40D /* AppDelegate.m */; };
+		D74547E52075BEEE007BE40D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D74547E42075BEEE007BE40D /* ViewController.m */; };
+		D74547E82075BEEE007BE40D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74547E62075BEEE007BE40D /* Main.storyboard */; };
+		D74547EA2075BEEE007BE40D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D74547E92075BEEE007BE40D /* Assets.xcassets */; };
+		D74547ED2075BEEE007BE40D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D74547EB2075BEEE007BE40D /* LaunchScreen.storyboard */; };
+		D74547F82075BEEE007BE40D /* HomeFarmTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74547F72075BEEE007BE40D /* HomeFarmTests.m */; };
+		D74548032075BEEE007BE40D /* HomeFarmUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = D74548022075BEEE007BE40D /* HomeFarmUITests.m */; };
+		D745481420788FC6007BE40D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481320788FC6007BE40D /* SystemConfiguration.framework */; };
+		D745481620788FD4007BE40D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481520788FD4007BE40D /* libz.tbd */; };
+		D745481820788FE5007BE40D /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481720788FE5007BE40D /* libsqlite3.0.tbd */; };
+		D745481A20788FF4007BE40D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481920788FF4007BE40D /* CoreTelephony.framework */; };
+		D745481C20789002007BE40D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481B20789002007BE40D /* QuartzCore.framework */; };
+		D745482320789547007BE40D /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D745481E20789547007BE40D /* libWeChatSDK.a */; };
+		D745482420789547007BE40D /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D745481F20789547007BE40D /* README.txt */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D74547F42075BEEE007BE40D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D74547D22075BEEE007BE40D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D74547D92075BEEE007BE40D;
+			remoteInfo = HomeFarm;
+		};
+		D74547FF2075BEEE007BE40D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D74547D22075BEEE007BE40D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D74547D92075BEEE007BE40D;
+			remoteInfo = HomeFarm;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D74547DA2075BEEE007BE40D /* HomeFarm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeFarm.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74547DE2075BEEE007BE40D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		D74547E02075BEEE007BE40D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		D74547E12075BEEE007BE40D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		D74547E32075BEEE007BE40D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		D74547E42075BEEE007BE40D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		D74547E72075BEEE007BE40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D74547E92075BEEE007BE40D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D74547EC2075BEEE007BE40D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D74547EE2075BEEE007BE40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74547F32075BEEE007BE40D /* HomeFarmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeFarmTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74547F72075BEEE007BE40D /* HomeFarmTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFarmTests.m; sourceTree = "<group>"; };
+		D74547F92075BEEE007BE40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D74547FE2075BEEE007BE40D /* HomeFarmUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeFarmUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D74548022075BEEE007BE40D /* HomeFarmUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeFarmUITests.m; sourceTree = "<group>"; };
+		D74548042075BEEE007BE40D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D745481120776B2C007BE40D /* HomeFarm.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeFarm.pch; sourceTree = "<group>"; };
+		D745481320788FC6007BE40D /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		D745481520788FD4007BE40D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D745481720788FE5007BE40D /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		D745481920788FF4007BE40D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D745481B20789002007BE40D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D745481E20789547007BE40D /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
+		D745481F20789547007BE40D /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
+		D745482020789547007BE40D /* WechatAuthSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WechatAuthSDK.h; sourceTree = "<group>"; };
+		D745482120789547007BE40D /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
+		D745482220789547007BE40D /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D74547D72075BEEE007BE40D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D745481C20789002007BE40D /* QuartzCore.framework in Frameworks */,
+				D745481A20788FF4007BE40D /* CoreTelephony.framework in Frameworks */,
+				D745482320789547007BE40D /* libWeChatSDK.a in Frameworks */,
+				D745481820788FE5007BE40D /* libsqlite3.0.tbd in Frameworks */,
+				D745481620788FD4007BE40D /* libz.tbd in Frameworks */,
+				D745481420788FC6007BE40D /* SystemConfiguration.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547F02075BEEE007BE40D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547FB2075BEEE007BE40D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D74547D12075BEEE007BE40D = {
+			isa = PBXGroup;
+			children = (
+				D74547DC2075BEEE007BE40D /* HomeFarm */,
+				D74547F62075BEEE007BE40D /* HomeFarmTests */,
+				D74548012075BEEE007BE40D /* HomeFarmUITests */,
+				D74547DB2075BEEE007BE40D /* Products */,
+				D745481220788FC6007BE40D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D74547DB2075BEEE007BE40D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D74547DA2075BEEE007BE40D /* HomeFarm.app */,
+				D74547F32075BEEE007BE40D /* HomeFarmTests.xctest */,
+				D74547FE2075BEEE007BE40D /* HomeFarmUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D74547DC2075BEEE007BE40D /* HomeFarm */ = {
+			isa = PBXGroup;
+			children = (
+				D745481D20789547007BE40D /* WechatSDK1.8.2 */,
+				D74547E02075BEEE007BE40D /* AppDelegate.h */,
+				D74547E12075BEEE007BE40D /* AppDelegate.m */,
+				D74547E32075BEEE007BE40D /* ViewController.h */,
+				D74547E42075BEEE007BE40D /* ViewController.m */,
+				D74547E62075BEEE007BE40D /* Main.storyboard */,
+				D74547E92075BEEE007BE40D /* Assets.xcassets */,
+				D74547EB2075BEEE007BE40D /* LaunchScreen.storyboard */,
+				D74547EE2075BEEE007BE40D /* Info.plist */,
+				D74547DD2075BEEE007BE40D /* Supporting Files */,
+			);
+			path = HomeFarm;
+			sourceTree = "<group>";
+		};
+		D74547DD2075BEEE007BE40D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D74547DE2075BEEE007BE40D /* main.m */,
+				D745481120776B2C007BE40D /* HomeFarm.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D74547F62075BEEE007BE40D /* HomeFarmTests */ = {
+			isa = PBXGroup;
+			children = (
+				D74547F72075BEEE007BE40D /* HomeFarmTests.m */,
+				D74547F92075BEEE007BE40D /* Info.plist */,
+			);
+			path = HomeFarmTests;
+			sourceTree = "<group>";
+		};
+		D74548012075BEEE007BE40D /* HomeFarmUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D74548022075BEEE007BE40D /* HomeFarmUITests.m */,
+				D74548042075BEEE007BE40D /* Info.plist */,
+			);
+			path = HomeFarmUITests;
+			sourceTree = "<group>";
+		};
+		D745481220788FC6007BE40D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D745481B20789002007BE40D /* QuartzCore.framework */,
+				D745481920788FF4007BE40D /* CoreTelephony.framework */,
+				D745481720788FE5007BE40D /* libsqlite3.0.tbd */,
+				D745481520788FD4007BE40D /* libz.tbd */,
+				D745481320788FC6007BE40D /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D745481D20789547007BE40D /* WechatSDK1.8.2 */ = {
+			isa = PBXGroup;
+			children = (
+				D745481E20789547007BE40D /* libWeChatSDK.a */,
+				D745481F20789547007BE40D /* README.txt */,
+				D745482020789547007BE40D /* WechatAuthSDK.h */,
+				D745482120789547007BE40D /* WXApi.h */,
+				D745482220789547007BE40D /* WXApiObject.h */,
+			);
+			path = WechatSDK1.8.2;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D74547D92075BEEE007BE40D /* HomeFarm */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D74548072075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarm" */;
+			buildPhases = (
+				D74547D62075BEEE007BE40D /* Sources */,
+				D74547D72075BEEE007BE40D /* Frameworks */,
+				D74547D82075BEEE007BE40D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomeFarm;
+			productName = HomeFarm;
+			productReference = D74547DA2075BEEE007BE40D /* HomeFarm.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D74547F22075BEEE007BE40D /* HomeFarmTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D745480A2075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarmTests" */;
+			buildPhases = (
+				D74547EF2075BEEE007BE40D /* Sources */,
+				D74547F02075BEEE007BE40D /* Frameworks */,
+				D74547F12075BEEE007BE40D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D74547F52075BEEE007BE40D /* PBXTargetDependency */,
+			);
+			name = HomeFarmTests;
+			productName = HomeFarmTests;
+			productReference = D74547F32075BEEE007BE40D /* HomeFarmTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D74547FD2075BEEE007BE40D /* HomeFarmUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D745480D2075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarmUITests" */;
+			buildPhases = (
+				D74547FA2075BEEE007BE40D /* Sources */,
+				D74547FB2075BEEE007BE40D /* Frameworks */,
+				D74547FC2075BEEE007BE40D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D74548002075BEEE007BE40D /* PBXTargetDependency */,
+			);
+			name = HomeFarmUITests;
+			productName = HomeFarmUITests;
+			productReference = D74547FE2075BEEE007BE40D /* HomeFarmUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D74547D22075BEEE007BE40D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "北京易信科技";
+				TargetAttributes = {
+					D74547D92075BEEE007BE40D = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					D74547F22075BEEE007BE40D = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D74547D92075BEEE007BE40D;
+					};
+					D74547FD2075BEEE007BE40D = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = D74547D92075BEEE007BE40D;
+					};
+				};
+			};
+			buildConfigurationList = D74547D52075BEEE007BE40D /* Build configuration list for PBXProject "HomeFarm" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D74547D12075BEEE007BE40D;
+			productRefGroup = D74547DB2075BEEE007BE40D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D74547D92075BEEE007BE40D /* HomeFarm */,
+				D74547F22075BEEE007BE40D /* HomeFarmTests */,
+				D74547FD2075BEEE007BE40D /* HomeFarmUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D74547D82075BEEE007BE40D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74547ED2075BEEE007BE40D /* LaunchScreen.storyboard in Resources */,
+				D74547EA2075BEEE007BE40D /* Assets.xcassets in Resources */,
+				D745482420789547007BE40D /* README.txt in Resources */,
+				D74547E82075BEEE007BE40D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547F12075BEEE007BE40D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547FC2075BEEE007BE40D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D74547D62075BEEE007BE40D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74547E52075BEEE007BE40D /* ViewController.m in Sources */,
+				D74547E22075BEEE007BE40D /* AppDelegate.m in Sources */,
+				D74547DF2075BEEE007BE40D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547EF2075BEEE007BE40D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74547F82075BEEE007BE40D /* HomeFarmTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D74547FA2075BEEE007BE40D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D74548032075BEEE007BE40D /* HomeFarmUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D74547F52075BEEE007BE40D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D74547D92075BEEE007BE40D /* HomeFarm */;
+			targetProxy = D74547F42075BEEE007BE40D /* PBXContainerItemProxy */;
+		};
+		D74548002075BEEE007BE40D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D74547D92075BEEE007BE40D /* HomeFarm */;
+			targetProxy = D74547FF2075BEEE007BE40D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D74547E62075BEEE007BE40D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D74547E72075BEEE007BE40D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D74547EB2075BEEE007BE40D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D74547EC2075BEEE007BE40D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D74548052075BEEE007BE40D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		D74548062075BEEE007BE40D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D74548082075BEEE007BE40D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HomeFarm/HomeFarm.pch;
+				INFOPLIST_FILE = HomeFarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeFarm/WechatSDK1.8.2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		D74548092075BEEE007BE40D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = HomeFarm/HomeFarm.pch;
+				INFOPLIST_FILE = HomeFarm/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HomeFarm/WechatSDK1.8.2",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarm;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		D745480B2075BEEE007BE40D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HomeFarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeFarm.app/HomeFarm";
+			};
+			name = Debug;
+		};
+		D745480C2075BEEE007BE40D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = HomeFarmTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarmTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HomeFarm.app/HomeFarm";
+			};
+			name = Release;
+		};
+		D745480E2075BEEE007BE40D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HomeFarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HomeFarm;
+			};
+			name = Debug;
+		};
+		D745480F2075BEEE007BE40D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HomeFarmUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarmUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = HomeFarm;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D74547D52075BEEE007BE40D /* Build configuration list for PBXProject "HomeFarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74548052075BEEE007BE40D /* Debug */,
+				D74548062075BEEE007BE40D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D74548072075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarm" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D74548082075BEEE007BE40D /* Debug */,
+				D74548092075BEEE007BE40D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D745480A2075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarmTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D745480B2075BEEE007BE40D /* Debug */,
+				D745480C2075BEEE007BE40D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		D745480D2075BEEE007BE40D /* Build configuration list for PBXNativeTarget "HomeFarmUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D745480E2075BEEE007BE40D /* Debug */,
+				D745480F2075BEEE007BE40D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D74547D22075BEEE007BE40D /* Project object */;
+}
