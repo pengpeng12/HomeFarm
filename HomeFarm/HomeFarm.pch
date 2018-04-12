@@ -30,6 +30,7 @@
 
 #import "UIViewExt.h"
 
+
 //日志开关 仅在debug下会起作用
 #ifdef DEBUG
 #define NSLog(FORMAT, ...) printf("%s\n", [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String])
@@ -37,7 +38,11 @@
 #define MesLog(...)
 #endif
 
-
+#define telNum @"0123456789"
+//alert提示框
+#   define AlertViewShow(msg,btnTitle,cancelTitle)\
+UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:btnTitle otherButtonTitles:cancelTitle,nil];\
+[alert show];
 
 
 #endif /* HomeFarm_pch */
