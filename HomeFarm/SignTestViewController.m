@@ -6,20 +6,20 @@
 //  Copyright © 2018年 北京易信科技. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "SignTestViewController.h"
 
 
-@interface ViewController ()
+@interface SignTestViewController ()
 
 @end
 
-@implementation ViewController
+@implementation SignTestViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = [UIColor blueColor];
-    self.title = @"首页";
+    self.title = @"验证测试";
     
     //测试sign验证
 //    , @{@"other":@"abc"}

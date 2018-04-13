@@ -7,6 +7,7 @@
 //
 
 #import "YXFindViewController.h"
+#import "YXSearchView.h"
 
 @interface YXFindViewController ()
 
@@ -18,7 +19,16 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
-    self.title = @"查找";
+//    self.title = @"发现";
+    [self customNavItem];
+}
+
+#pragma mark - 定制导航条内容
+- (void) customNavItem {
+    YXSearchView *searchBar = [YXSearchView searchBar];
+    searchBar.width = 375;
+    searchBar.height = 30;
+    self.navigationItem.titleView = searchBar;
 }
 
 - (void)didReceiveMemoryWarning {
