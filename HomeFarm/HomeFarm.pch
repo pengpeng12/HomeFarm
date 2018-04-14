@@ -16,8 +16,12 @@
 //微信支付
 #import "WXApi.h"
 
+//支付宝
+#import <AlipaySDK/AlipaySDK.h>
+
 // 2.获得RGB颜色
-#define XLColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define RGBA(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+#define RGB(r,g,b) RGBA(r,g,b,1.0f)
 
 #define SCREEN_MAX_LENGTH (MAX(kDeviceWidth, kDeviceHeight))
 
@@ -26,9 +30,44 @@
 #define    kDevice_Is_iPhoneX ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
 #define    kStatusBar_Height kDevice_Is_iPhoneX?44:20
 #define    kTableView_Height kDevice_Is_iPhoneX?88:64
-#define RGBColor(r,g,b,a) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
+#define    DCTopNavH kDevice_Is_iPhoneX?88:64
+#define    DCBottomTabH 49
+//全局背景色
+#define DCBGColor RGB(245,245,245)
+#define DCMargin 10
+/** 屏幕高度 */
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+/** 屏幕宽度 */
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+/** 弱引用 */
+#define WEAKSELF __weak typeof(self) weakSelf = self;
+
+#define PFR [[[UIDevice currentDevice] systemVersion] floatValue] >= 9.0 ? @"PingFangSC-Regular" : @"PingFang SC"
+
+/*****************  屏幕适配  ******************/
+#define iphone6p (ScreenH == 763)
+#define iphone6 (ScreenH == 667)
+#define iphone5 (ScreenH == 568)
+
+
+#define PFR20Font [UIFont fontWithName:PFR size:20];
+#define PFR18Font [UIFont fontWithName:PFR size:18];
+#define PFR16Font [UIFont fontWithName:PFR size:16];
+#define PFR15Font [UIFont fontWithName:PFR size:15];
+#define PFR14Font [UIFont fontWithName:PFR size:14];
+#define PFR13Font [UIFont fontWithName:PFR size:13];
+#define PFR12Font [UIFont fontWithName:PFR size:12];
+#define PFR11Font [UIFont fontWithName:PFR size:11];
+#define PFR10Font [UIFont fontWithName:PFR size:10];
+#define PFR9Font [UIFont fontWithName:PFR size:9];
+#define PFR8Font [UIFont fontWithName:PFR size:8];
+
 
 #import "UIViewExt.h"
+#import "SDWebImageManager.h"
+#import "Masonry.h"
+#import "MJRefresh.h"
+#import "DCSpeedy.h"
 
 
 //日志开关 仅在debug下会起作用

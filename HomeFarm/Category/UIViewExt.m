@@ -189,4 +189,34 @@ CGRect CGRectMoveToCenter(CGRect rect, CGPoint center)
 	
 	self.frame = newframe;	
 }
+
+-(CGFloat)dc_centerX{
+    
+    return self.center.x;
+}
+
+-(void)setDc_centerX:(CGFloat)dc_centerX{
+    
+    CGPoint dcFrmae = self.center;
+    dcFrmae.x = dc_centerX;
+    self.center = dcFrmae;
+}
+
+-(CGFloat)dc_centerY{
+    
+    return self.center.y;
+}
+
+-(void)setDc_centerY:(CGFloat)dc_centerY{
+    
+    CGPoint dcFrame = self.center;
+    dcFrame.y = dc_centerY;
+    self.center = dcFrame;
+}
+
++(instancetype)dc_viewFromXib
+{
+    return [[NSBundle mainBundle]loadNibNamed:NSStringFromClass(self) owner:nil options:nil].firstObject;
+}
+
 @end
