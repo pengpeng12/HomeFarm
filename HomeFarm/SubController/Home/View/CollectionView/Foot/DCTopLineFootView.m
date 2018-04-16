@@ -16,8 +16,6 @@
 #import "DCTitleRolling.h"
 // Vendors
 
-// Categories
-#import <UIImageView+WebCache.h>
 // Others
 
 @interface DCTopLineFootView ()<UIScrollViewDelegate,CDDRollingDelegate>
@@ -79,7 +77,7 @@
     _bottomLineView = [[UIView alloc] init];
     _bottomLineView.backgroundColor = DCBGColor;
     [self addSubview:_bottomLineView];
-    _bottomLineView.frame = CGRectMake(0, self.height - 8, ScreenW, 8);
+    _bottomLineView.frame = CGRectMake(0, self.height - 8, kScreen_Width, 8);
 }
 
 - (void)layoutSubviews

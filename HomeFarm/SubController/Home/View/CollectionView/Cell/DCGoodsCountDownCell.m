@@ -14,8 +14,6 @@
 #import "DCRecommendItem.h"
 // Views
 #import "DCGoodsSurplusCell.h"
-// Vendors
-#import <MJExtension.h>
 // Categories
 
 // Others
@@ -84,7 +82,7 @@ static NSString *const DCGoodsSurplusCellID = @"DCGoodsSurplusCell";
     _bottomLineView = [[UIView alloc] init];
     _bottomLineView.backgroundColor = DCBGColor;
     [self addSubview:_bottomLineView];
-    _bottomLineView.frame = CGRectMake(0, self.height - 8, ScreenW, 8);
+    _bottomLineView.frame = CGRectMake(0, self.height - 8, kScreen_Width, 8);
 }
 
 #pragma mark - 布局

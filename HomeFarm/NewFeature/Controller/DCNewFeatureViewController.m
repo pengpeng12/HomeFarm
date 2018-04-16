@@ -76,7 +76,7 @@ static NSString *const DCNewFeatureCellID = @"DCNewFeatureCell";
     if (!_skipButton) {
         
         _skipButton = [UIButton buttonWithType:UIButtonTypeCustom];
-        _skipButton.frame = CGRectMake(ScreenW - 85, 30, 65, 30);
+        _skipButton.frame = CGRectMake(kScreen_Width - 85, 30, 65, 30);
         [_skipButton addTarget:self action:@selector(skipButtonClick) forControlEvents:UIControlEventTouchUpInside];
         _skipButton.hidden = YES;
         _skipButton.backgroundColor = [[UIColor lightGrayColor]colorWithAlphaComponent:0.8];
@@ -99,7 +99,7 @@ static NSString *const DCNewFeatureCellID = @"DCNewFeatureCell";
         [_pageControl setPageIndicatorTintColor:[UIColor lightGrayColor]];
         UIColor *currColor = (_selColor == nil) ? [UIColor darkGrayColor] : _selColor;
         [self.pageControl setCurrentPageIndicatorTintColor:currColor];
-        _pageControl.frame = CGRectMake(0, ScreenH * 0.95, ScreenW, 35);
+        _pageControl.frame = CGRectMake(0, kScreen_Height * 0.95, kScreen_Width, 35);
         [self.view addSubview:_pageControl];
     }
     return _pageControl;
@@ -182,15 +182,15 @@ static NSString *const DCNewFeatureCellID = @"DCNewFeatureCell";
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(ScreenW, ScreenH);
+    return CGSizeMake(kScreen_Width, kScreen_Height);
 }
 
 #pragma mark - 通过代理来让她滑到最后一页再左滑动就切换控制器
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
     if (_imageArray.count < 2) return; //一张图或者没有直接返回
-    _collectionView.bounces = (scrollView.contentOffset.x > (_imageArray.count - 2) * ScreenW) ? YES : NO;
-    if (scrollView.contentOffset.x >  (_imageArray.count - 1) * ScreenW) {
+    _collectionView.bounces = (scrollView.contentOffset.x > (_imageArray.count - 2) * kScreen_Width) ? YES : NO;
+    if (scrollView.contentOffset.x >  (_imageArray.count - 1) * kScreen_Width) {
         [self restoreRootViewController:[[FHTabBarController alloc] init]];
     }
 }

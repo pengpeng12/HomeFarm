@@ -6,7 +6,7 @@
 //  Copyright © 2017年 RocketsChen. All rights reserved.
 //
 
-#define cellWH ScreenW * 0.5 - 50
+#define cellWH kScreen_Width * 0.5 - 50
 
 #import "DCGoodsYouLikeCell.h"
 

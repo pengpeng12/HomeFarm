@@ -9,8 +9,8 @@
 #import "DCLoginViewController.h"
 
 // Controllers
-#import "DCNavigationController.h"
-#import "DCTabBarController.h"
+#import "FHNavigationController.h"
+#import "FHTabBarController.h"
 #import "DCRegisteredViewController.h"
 // Models
 
@@ -80,7 +80,7 @@
 - (void)setUpTiTleView
 {
     _titleView = [UIView new];
-    _titleView.frame = CGRectMake(0, 0, ScreenW, 35);
+    _titleView.frame = CGRectMake(0, 0, kScreen_Width, 35);
     [_middleLoginView addSubview:_titleView];
     
     NSArray *titleArray = @[@"账号密码登录",@"短信验证登录"];
@@ -112,10 +112,10 @@
     _indicatorView.height = 2;
     _indicatorView.width = firstButton.titleLabel.width;
     _indicatorView.dc_centerX = firstButton.dc_centerX;
-    _indicatorView.dc_y = _titleView.dc_bottom - _indicatorView.height;
+    _indicatorView.top = _titleView.bottom - _indicatorView.height;
     [_titleView addSubview:_indicatorView];
     
-    self.contentView.contentSize = CGSizeMake(ScreenW * titleArray.count, 0);
+    self.contentView.contentSize = CGSizeMake(kScreen_Width * titleArray.count, 0);
 }
 
 
@@ -144,7 +144,7 @@
 {
     
     self.contentView.backgroundColor = [UIColor orangeColor];
-    self.contentView.frame = CGRectMake(0, _titleView.dc_bottom + DCMargin, ScreenW, _middleLoginView.height - _titleView.dc_bottom - DCMargin);
+    self.contentView.frame = CGRectMake(0, _titleView.bottom + DCMargin, kScreen_Width, _middleLoginView.height - _titleView.bottom - DCMargin);
     [self.middleLoginView addSubview:_contentView];
     
     _verificationView = [DCVerificationView dc_viewFromXib];
@@ -152,8 +152,8 @@
     _accountPsdView = [DCAccountPsdView dc_viewFromXib];
     [_contentView addSubview:_accountPsdView];
 
-    _verificationView.frame = CGRectMake(ScreenW, 0, ScreenW, _middleLoginView.height - _titleView.height);
-    _accountPsdView.frame = CGRectMake(0, 0, ScreenW, _middleLoginView.height - _titleView.height);
+    _verificationView.frame = CGRectMake(kScreen_Width, 0, kScreen_Width, _middleLoginView.height - _titleView.height);
+    _accountPsdView.frame = CGRectMake(0, 0, kScreen_Width, _middleLoginView.height - _titleView.height);
 }
 
 #pragma mark - 注册
@@ -169,9 +169,9 @@
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 
-    if (self.tabBarController.selectedIndex == DCTabBarControllerPerson) { //判断选择控制器为登录控制器
-        self.tabBarController.selectedIndex = DCTabBarControllerHome; //跳转到首页去
-    }
+//    if (self.tabBarController.selectedIndex == DCTabBarControllerPerson) { //判断选择控制器为登录控制器
+        self.tabBarController.selectedIndex = 0; //跳转到首页去
+//    }
 }
 
 

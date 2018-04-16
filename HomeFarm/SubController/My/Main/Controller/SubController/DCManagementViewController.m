@@ -46,7 +46,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
-        _tableView.frame = CGRectMake(0, DCTopNavH, ScreenW, ScreenH - DCTopNavH);
+        _tableView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH);
         [self.view addSubview:_tableView];
         
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCUserMgCell class]) bundle:nil] forCellReuseIdentifier:DCUserMgCellID];
@@ -93,7 +93,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
 - (void)setUpHeadView
 {
     _headView = [DCUserMgHeadView dc_viewFromXib];
-    _headView.frame = CGRectMake(0, 0, ScreenW, 190);
+    _headView.frame = CGRectMake(0, 0, kScreen_Width, 190);
     self.tableView.tableHeaderView = _headView;
     _headView.headViewTouchBlock = ^{
         NSLog(@"点击了头部View");

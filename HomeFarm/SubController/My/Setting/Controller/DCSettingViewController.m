@@ -17,7 +17,7 @@
 #import "DCUserMgCell.h"
 #import "DCUserMgHeadView.h"
 // Vendors
-#import <SVProgressHUD.h>
+#import "SVProgressHUD.h"
 #import "UIView+Toast.h"
 // Categories
 
@@ -47,7 +47,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
-        _tableView.frame = CGRectMake(0, DCTopNavH, ScreenW, ScreenH - DCTopNavH);
+        _tableView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH);
         [self.view addSubview:_tableView];
         
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCUserMgCell class]) bundle:nil] forCellReuseIdentifier:DCUserMgCellID];
@@ -101,7 +101,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
     UIButton *loginOffButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [loginOffButton setTitle:@"退出登录" forState:0];
     loginOffButton.backgroundColor = RGB(235, 103, 98);
-    loginOffButton.frame = CGRectMake(15, 35, ScreenW - 30, 45);
+    loginOffButton.frame = CGRectMake(15, 35, kScreen_Width - 30, 45);
     [loginOffButton addTarget:self action:@selector(loginOffClick) forControlEvents:UIControlEventTouchUpInside];
     [footerView addSubview:loginOffButton];
     [DCSpeedy dc_setUpBezierPathCircularLayerWithControl:loginOffButton size:CGSizeMake(DCMargin, DCMargin)];
@@ -134,7 +134,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
 - (void)setUpHeadView
 {
     _headView = [DCUserMgHeadView dc_viewFromXib];
-    _headView.frame = CGRectMake(0, 0, ScreenW, 190);
+    _headView.frame = CGRectMake(0, 0, kScreen_Width, 190);
     self.tableView.tableHeaderView = _headView;
     _headView.headViewTouchBlock = ^{
         NSLog(@"点击了头部View");

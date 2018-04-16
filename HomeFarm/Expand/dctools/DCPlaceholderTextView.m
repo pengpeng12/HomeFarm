@@ -40,7 +40,7 @@
         [self addSubview:placeholderLabel];
         _placeholderLabel = placeholderLabel;
         _placeholderLabel.left = 4;
-        _placeholderLabel.dc_y = 7;
+        _placeholderLabel.top = 7;
         
     }
     return _placeholderLabel;
@@ -131,8 +131,8 @@
  */
 - (void)updatePlaceholderLabelSize
 {
-    CGSize maxSize = CGSizeMake(ScreenW - 2 * self.placeholderLabel.left, MAXFLOAT);
-    self.placeholderLabel.dc_size = [_placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
+    CGSize maxSize = CGSizeMake(kScreen_Width - 2 * self.placeholderLabel.left, MAXFLOAT);
+    self.placeholderLabel.size = [_placeholder boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : self.font} context:nil].size;
 }
 
 /**

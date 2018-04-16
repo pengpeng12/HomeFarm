@@ -10,10 +10,13 @@
 #import "FHNavigationController.h"
 
 #import "YXHomeViewController.h"
+#import "DCHandPickViewController.h"
 #import "YXSortViewController.h"
 #import "YXShopCartController.h"
 #import "YXFindViewController.h"
 #import "YXMyViewController.h"
+#import "CommodityViewController.h"
+
 @interface FHTabBarController ()
 
 @end
@@ -24,17 +27,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     // 设置子控制器
-    YXHomeViewController *home = [[YXHomeViewController alloc]init];
+//    YXHomeViewController *home = [[YXHomeViewController alloc]init];
+    DCHandPickViewController *home = [[DCHandPickViewController alloc]init];
     [self addChildViewController:home title:@"首页" image:@"tabbar_home" selImage:@"tabbar_home_selected"];
     
-    YXSortViewController *messageCenter = [[YXSortViewController alloc] init];
-    [self addChildViewController:messageCenter title:@"分类" image:@"tabbar_message_center" selImage:@"tabbar_message_center_selected"];
+    YXSortViewController *dcComVc = [[YXSortViewController alloc] init];
+//    DCCommodityViewController *dcComVc = [[DCCommodityViewController alloc]init];
+    [self addChildViewController:dcComVc title:@"分类" image:@"tabbar_message_center" selImage:@"tabbar_message_center_selected"];
     
     YXFindViewController *discover = [[YXFindViewController alloc] init];
     [self addChildViewController:discover title:@"发现" image:@"tabbar_discover" selImage:@"tabbar_discover_selected"];
     
     YXShopCartController *shopcart = [[YXShopCartController alloc] init];
-    [self addChildViewController:shopcart title:@"购物车" image:@"tabbar_compose_button" selImage:@"tabbar_compose_button_highlighted"];
+    [self addChildViewController:shopcart title:@"购物车" image:@"tabbar_discover" selImage:@"tabbar_discover_selected"];
     
     YXMyViewController *profile = [[YXMyViewController alloc] init];
     [self addChildViewController:profile title:@"我" image:@"tabbar_profile" selImage:@"tabbar_profile_selected"];

@@ -79,7 +79,7 @@
             height = [_delegate heightOfSectionFooterForIndexPath:indexPath];
         }
     }
-    layoutAttrbutes.frame = CGRectMake(0, self.overallHeight, ScreenW, height);
+    layoutAttrbutes.frame = CGRectMake(0, self.overallHeight, kScreen_Width, height);
     
     self.overallHeight += height;
     
@@ -117,7 +117,7 @@
     CGFloat itemY = self.overallHeight;
 
     CGFloat itemH = 85;
-    CGFloat itemW = ScreenW / 2.0;
+    CGFloat itemW = kScreen_Width / 2.0;
     switch (indexPath.item) {
         case 0:
             layoutAttributes.frame = CGRectMake(0, itemY, itemW, itemH);
@@ -127,7 +127,7 @@
             break;
         case 2:
             self.overallHeight += itemH;
-            layoutAttributes.frame = CGRectMake(0, itemH, ScreenW, itemH);
+            layoutAttributes.frame = CGRectMake(0, itemH, kScreen_Width, itemH);
             self.overallHeight += itemH;
             break;
         default:

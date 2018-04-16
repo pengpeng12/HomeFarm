@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <TZImagePickerController.h>
-#import <TZImageManager.h>
+#import "TZImagePickerController.h"
+#import "TZImageManager.h"
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <Photos/Photos.h>
 

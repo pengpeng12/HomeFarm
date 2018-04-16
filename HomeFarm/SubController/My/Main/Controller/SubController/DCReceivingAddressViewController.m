@@ -53,7 +53,7 @@ static NSString *const DCUserAdressCellID = @"DCUserAdressCell";
         
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCUserAdressCell class]) bundle:nil] forCellReuseIdentifier:DCUserAdressCellID];
         
-        _tableView.frame = CGRectMake(0, DCTopNavH, ScreenW, ScreenH - DCTopNavH);
+        _tableView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH);
         
         [self.view addSubview:_tableView];
         
@@ -70,7 +70,7 @@ static NSString *const DCUserAdressCellID = @"DCUserAdressCell";
         _bgTipButton.titleLabel.font = PFR13Font;
         [_bgTipButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
         [_bgTipButton setTitle:@"您还没有收货地址" forState:UIControlStateNormal];
-        _bgTipButton.frame = CGRectMake((ScreenW - 150) * 1/2 , (ScreenH - 150) * 1/2 , 150, 150);
+        _bgTipButton.frame = CGRectMake((kScreen_Width - 150) * 1/2 , (kScreen_Height - 150) * 1/2 , 150, 150);
         _bgTipButton.adjustsImageWhenHighlighted = false;
     }
     return _bgTipButton;

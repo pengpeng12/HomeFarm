@@ -35,7 +35,7 @@
 {
     [super awakeFromNib];
     
-    [DCSpeedy dc_setUpBezierPathCircularLayerWithControl:self.headButton size:CGSizeMake(self.headButton.width * 0.5, self.headButton.dc_height * 0.5)];
+    [DCSpeedy dc_setUpBezierPathCircularLayerWithControl:self.headButton size:CGSizeMake(self.headButton.width * 0.5, self.headButton.height * 0.5)];
     self.headBgView.userInteractionEnabled = YES;
     UITapGestureRecognizer *tapGest = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(headViewTouch)];
     [self.headBgView addGestureRecognizer:tapGest];

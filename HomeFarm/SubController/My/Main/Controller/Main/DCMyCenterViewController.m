@@ -61,7 +61,7 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
         _tableView.delegate = self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
         _tableView.showsVerticalScrollIndicator = NO;
-        _tableView.frame = CGRectMake(0, 0, ScreenW, ScreenH - DCBottomTabH);
+        _tableView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - DCBottomTabH);
         [self.view addSubview:_tableView];
         
         [_tableView registerClass:[DCCenterItemCell class] forCellReuseIdentifier:DCCenterItemCellID];
@@ -89,7 +89,7 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
 {
     if (!_headView) {
         _headView = [DCMyCenterHeaderView dc_viewFromXib];
-        _headView.frame =  CGRectMake(0, 0, ScreenW, 200);
+        _headView.frame =  CGRectMake(0, 0, kScreen_Width, 200);
     }
     return _headView;
 }
@@ -132,7 +132,7 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
 #pragma mark - 导航栏处理
 - (void)setUpNavTopView
 {
-    _topToolView = [[DCCenterTopToolView alloc] initWithFrame:CGRectMake(0, 0, ScreenW, 64)];
+    _topToolView = [[DCCenterTopToolView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
     WEAKSELF
     _topToolView.leftItemClickBlock = ^{ //点击了扫描
 //        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
@@ -235,7 +235,7 @@ static NSString *const DCCenterBackCellID = @"DCCenterBackCell";
     //图片高度
     CGFloat imageHeight = self.headView.height;
     //图片宽度
-    CGFloat imageWidth = ScreenW;
+    CGFloat imageWidth = kScreen_Width;
     //图片上下偏移量
     CGFloat imageOffsetY = scrollView.contentOffset.y;
     //上移

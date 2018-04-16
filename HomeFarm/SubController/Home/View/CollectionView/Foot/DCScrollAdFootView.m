@@ -8,7 +8,6 @@
 
 #import "DCScrollAdFootView.h"
 
-#import <SDCycleScrollView.h>
 
 @interface DCScrollAdFootView ()<SDCycleScrollViewDelegate>
 
@@ -33,7 +32,7 @@
 - (void)setUpUI
 {
     self.backgroundColor = [UIColor whiteColor];
-    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, ScreenW, self.height) delegate:self placeholderImage:nil];
+    _cycleScrollView = [SDCycleScrollView cycleScrollViewWithFrame:CGRectMake(0, 0, kScreen_Width, self.height) delegate:self placeholderImage:nil];
     _cycleScrollView.bannerImageViewContentMode = UIViewContentModeScaleAspectFill;
     _cycleScrollView.autoScrollTimeInterval = 5.0;
     _cycleScrollView.imageURLStringsGroup = GoodsFooterImagesArray;

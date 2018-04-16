@@ -18,8 +18,7 @@
 #import "DCEmptyCartView.h"
 #import "DCRecommendCell.h"
 #import "DCRecommendReusableView.h"
-// Vendors
-#import <MJExtension.h>
+
 #import "UINavigationController+FDFullscreenPopGesture.h"
 // Categories
 
@@ -91,7 +90,7 @@ static NSString *const DCRecommendCellID = @"DCRecommendCell";
     self.collectionView.backgroundColor = [UIColor whiteColor];
     self.automaticallyAdjustsScrollViewInsets = NO;
     CGFloat colBottom = (self.isTabBar == NO) ? DCBottomTabH : 0;
-    self.collectionView.frame = CGRectMake(0, ScreenH - collectionViewH - colBottom, ScreenW, collectionViewH);
+    self.collectionView.frame = CGRectMake(0, kScreen_Height - collectionViewH - colBottom, kScreen_Width, collectionViewH);
     [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 
@@ -107,7 +106,7 @@ static NSString *const DCRecommendCellID = @"DCRecommendCell";
     DCRecommendReusableView *recommendReusableView = [[DCRecommendReusableView alloc]init];
     recommendReusableView.backgroundColor = self.collectionView.backgroundColor;
     [self.view addSubview:recommendReusableView];
-    recommendReusableView.frame = CGRectMake(0, _collectionView.dc_y - recommendReusableViewH, ScreenW, recommendReusableViewH);
+    recommendReusableView.frame = CGRectMake(0, _collectionView.top - recommendReusableViewH, kScreen_Width, recommendReusableViewH);
 }
 
 #pragma mark - 初始化空购物车View
@@ -116,7 +115,7 @@ static NSString *const DCRecommendCellID = @"DCRecommendCell";
     DCEmptyCartView *emptyCartView = [[DCEmptyCartView alloc] init];
     [self.view addSubview:emptyCartView];
     
-    emptyCartView.frame = CGRectMake(0, DCTopNavH, ScreenW, ScreenH - DCTopNavH - DCBottomTabH - (collectionViewH + recommendReusableViewH));
+    emptyCartView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH - DCBottomTabH - (collectionViewH + recommendReusableViewH));
     emptyCartView.buyingClickBlock = ^{
         NSLog(@"点击了立即抢购");
     };

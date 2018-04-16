@@ -83,7 +83,7 @@
         [self setTitle:@"99+" forState:UIControlStateNormal];
     }
     
-    self.dc_size = CGSizeMake(22, 22);
+    self.size = CGSizeMake(22, 22);
     
     [DCSpeedy dc_chageControlCircularWith:self AndSetCornerRadius:11 SetBorderWidth:1 SetBorderColor:DCBGColor canMasksToBounds:YES];
 }

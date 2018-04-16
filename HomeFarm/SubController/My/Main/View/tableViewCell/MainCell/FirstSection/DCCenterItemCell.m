@@ -16,8 +16,6 @@
 // Views
 #import "DCStateItemCell.h"
 #import "DCStateItemFooterView.h"
-// Vendors
-#import <MJExtension.h>
 // Categories
 
 // Others
@@ -123,12 +121,12 @@ static NSString *const DCStateItemFooterViewID = @"DCStateItemFooterView";
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(ScreenW / 5, 90);
+    return CGSizeMake(kScreen_Width / 5, 90);
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section
 {
-    return CGSizeMake(ScreenW, 0);
+    return CGSizeMake(kScreen_Width, 0);
 }
 
 @end

@@ -46,7 +46,7 @@
     
     _verificationView = [DCVerificationView dc_viewFromXib];
     [_verificationView.loginButton setTitle:@"注册" forState:0];
-    _verificationView.frame = CGRectMake(0, DCNaviH + DCMargin, ScreenW, 400);
+    _verificationView.frame = CGRectMake(0, DCTopNavH + DCMargin, kScreen_Width, 400);
     _verificationView.agreementLabel.text = @"注册成功即代表同意《申通服务协议》";
     [self.view addSubview:_verificationView];
 }

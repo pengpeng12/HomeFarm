@@ -17,7 +17,6 @@
 #import "DCNewAdressView.h"
 // Vendors
 #import "UIView+Toast.h"
-#import <SVProgressHUD.h>
 #import "ChooseLocationView.h"
 #import "CitiesDataTool.h"
 // Categories
@@ -47,7 +46,7 @@
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
-        _tableView.frame = CGRectMake(0, DCTopNavH + 20, ScreenW, ScreenH - (DCTopNavH + 20 + 45));
+        _tableView.frame = CGRectMake(0, DCTopNavH + 20, kScreen_Width, kScreen_Height - (DCTopNavH + 20 + 45));
         [self.view addSubview:_tableView];
         
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
@@ -94,7 +93,7 @@
 - (void)setUpHeadView
 {
     _adressHeadView = [DCNewAdressView dc_viewFromXib];
-    _adressHeadView.frame = CGRectMake(0, 0, ScreenW, 210);
+    _adressHeadView.frame = CGRectMake(0, 0, kScreen_Width, 210);
     
     self.tableView.tableHeaderView = _adressHeadView;
     self.tableView.tableFooterView = [UIView new];
@@ -211,7 +210,7 @@
 - (ChooseLocationView *)chooseLocationView{
     
     if (!_chooseLocationView) {
-        _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, ScreenH - 350, ScreenW, 350)];
+        _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, kScreen_Height - 350, kScreen_Width, 350)];
         
     }
     return _chooseLocationView;

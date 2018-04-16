@@ -44,7 +44,7 @@ static NSString *const DCGoodsHandheldCellID = @"DCGoodsHandheldCell";
         layout.scrollDirection = UICollectionViewScrollDirectionHorizontal;
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
         [self addSubview:_collectionView];
-        _collectionView.frame = CGRectMake(0, ScreenW * 0.35 + DCMargin, ScreenW, 100);
+        _collectionView.frame = CGRectMake(0, kScreen_Width * 0.35 + DCMargin, kScreen_Width, 100);
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
@@ -81,7 +81,7 @@ static NSString *const DCGoodsHandheldCellID = @"DCGoodsHandheldCell";
         make.top.mas_equalTo(self);
         make.left.mas_equalTo(self);
         make.width.mas_equalTo(self);
-        make.height.mas_equalTo(ScreenW * 0.32);
+        make.height.mas_equalTo(kScreen_Width * 0.32);
     }];
 }
 

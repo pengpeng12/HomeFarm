@@ -230,8 +230,8 @@
                 CGSize tagTopSize = [self labelAutoCalculateRectWith:firstTagArrray[i] FontSize:self.titleFont - 1 MaxSize:CGSizeMake(MAXFLOAT, RollingViewHeight)];
                 CGSize tagBottomSize = [self labelAutoCalculateRectWith:lastTagArray[i] FontSize:self.titleFont - 1 MaxSize:CGSizeMake(MAXFLOAT, RollingViewHeight)];
                 
-                tagTopLabel.dc_size = CGSizeMake(tagTopSize.width + 4, tagTopSize.height + 4);
-                tagBottomLabel.dc_size = CGSizeMake(tagBottomSize.width + 4, tagBottomSize.height + 4);
+                tagTopLabel.size = CGSizeMake(tagTopSize.width + 4, tagTopSize.height + 4);
+                tagBottomLabel.size = CGSizeMake(tagBottomSize.width + 4, tagBottomSize.height + 4);
                 
                 contentTopLabel.frame = CGRectMake(CGRectGetMaxX(tagTopLabel.frame) + 5, 0, middleView.width - rightImageView.width, middleView.height * 0.5);
                 
@@ -286,7 +286,7 @@
                 }
                 
                 CGSize tagSize = [self labelAutoCalculateRectWith:self.rolTags[i] FontSize:self.titleFont - 1 MaxSize:CGSizeMake(MAXFLOAT, RollingViewHeight)];
-                tagLabel.dc_size = CGSizeMake(tagSize.width + 4, tagSize.height + 4);
+                tagLabel.size = CGSizeMake(tagSize.width + 4, tagSize.height + 4);
                 tagLabel.left = 0;
                 tagLabel.dc_centerY = middleView.dc_centerY;
                 

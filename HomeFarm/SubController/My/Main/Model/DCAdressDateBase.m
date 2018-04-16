@@ -9,7 +9,6 @@
 #import "DCAdressDateBase.h"
 
 #import "DCAdressItem.h"
-#import <FMDB.h>
 
 
 @interface DCAdressDateBase() <NSCopying,NSMutableCopying>{

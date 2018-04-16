@@ -7,8 +7,10 @@
 //
 
 #import "AppDelegate.h"
-#import "IQKeyboardManager.h"
 #import "FHTabBarController.h"
+#import "IQKeyboardManager.h"
+#import "DCAppVersionTool.h"
+#import "DCNewFeatureViewController.h"
 
 @interface AppDelegate ()<WXApiDelegate>{
 
@@ -34,11 +36,33 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     self.window.backgroundColor = [UIColor whiteColor];
     //设置根控制器
-    self.window.rootViewController = [[FHTabBarController alloc]init];
+    [self setUpRootVC];
     // 显示窗口
     [self.window makeKeyAndVisible];
     
     return YES;
+}
+
+#pragma mark - 根控制器
+- (void)setUpRootVC
+{
+    if ([BUNDLE_VERSION isEqualToString:[DCAppVersionTool dc_GetLastOneAppVersion]]) {//判断是否当前版本号等于上一次储存版本号
+        
+        self.window.rootViewController = [[FHTabBarController alloc] init];
+    }else{
+        
+        [DCAppVersionTool dc_SaveNewAppVersion:BUNDLE_VERSION]; //储存当前版本号
+        
+        // 设置窗口的根控制器
+        DCNewFeatureViewController *dcFVc = [[DCNewFeatureViewController alloc] init];
+        [dcFVc setUpFeatureAttribute:^(NSArray *__autoreleasing *imageArray, UIColor *__autoreleasing *selColor, BOOL *showSkip, BOOL *showPageCount) {
+            
+            *imageArray = @[@"guide1",@"guide2",@"guide3",@"guide4"];
+            *showPageCount = YES;
+            *showSkip = YES;
+        }];
+        self.window.rootViewController = dcFVc;
+    }
 }
 
 - (BOOL)application:(UIApplication *)application

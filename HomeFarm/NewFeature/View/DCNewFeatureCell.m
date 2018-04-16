@@ -61,7 +61,7 @@
         [self.hideButton sizeToFit]; //自适应
         
         [self.hideButton setImage:[UIImage imageNamed:hideBtnImg] forState:UIControlStateNormal];
-        self.hideButton.center = CGPointMake(ScreenW * 0.5, ScreenH * 0.9);
+        self.hideButton.center = CGPointMake(kScreen_Width * 0.5, kScreen_Height * 0.9);
     }
 }
 

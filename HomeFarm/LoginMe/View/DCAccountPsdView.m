@@ -10,15 +10,12 @@
 
 // Controllers
 #import "DCHandPickViewController.h"
-#import "DCBeautyMessageViewController.h"
-#import "DCMediaListViewController.h"
-#import "DCBeautyShopViewController.h"
+
 // Models
 
 // Views
 #import "UIView+Toast.h"
-// Vendors
-#import <SVProgressHUD.h>
+
 // Categories
 
 // Others
@@ -81,9 +78,9 @@
                 [[UIApplication sharedApplication].keyWindow.rootViewController dismissViewControllerAnimated:YES completion:^{
                     [weakSelf endEditing:YES];
                     NSLog(@"VC:%@  %@",[[DCSpeedy dc_getCurrentVC] class],[DCHandPickViewController class]);
-                    if ([@[[DCHandPickViewController class],[DCBeautyMessageViewController class],[DCMediaListViewController class],[DCBeautyShopViewController class]] containsObject:[[DCSpeedy dc_getCurrentVC] class]]) { //过滤
-                        [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
-                    }
+//                    if ([@[[DCHandPickViewController class],[DCBeautyMessageViewController class],[DCMediaListViewController class],[DCBeautyShopViewController class]] containsObject:[[DCSpeedy dc_getCurrentVC] class]]) { //过滤
+//                        [[NSNotificationCenter defaultCenter]postNotificationName:LOGINSELECTCENTERINDEX object:nil];
+//                    }
                 }];
             });
         });

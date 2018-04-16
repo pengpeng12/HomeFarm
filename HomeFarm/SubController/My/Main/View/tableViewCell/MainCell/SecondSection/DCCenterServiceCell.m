@@ -91,7 +91,7 @@ static NSString *const DCGoodsGridCellID = @"DCGoodsGridCell";
 #pragma mark - <UICollectionViewDelegateFlowLayout>
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(ScreenW / 4, 85);
+    return CGSizeMake(kScreen_Width / 4, 85);
 }
 
 

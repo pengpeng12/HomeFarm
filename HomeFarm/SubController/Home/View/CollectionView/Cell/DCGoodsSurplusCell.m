@@ -14,8 +14,7 @@
 
 // Views
 #import "DCRecommendItem.h"
-// Vendors
-#import <UIImageView+WebCache.h>
+
 // Categories
 
 // Others
