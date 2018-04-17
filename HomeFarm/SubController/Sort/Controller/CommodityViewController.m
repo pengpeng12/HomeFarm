@@ -55,7 +55,7 @@ static NSString *const DCBrandSortCellID = @"DCBrandSortCell";
 {
     if (!_tableView) {
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
-        _tableView.frame = CGRectMake(0, 0, tableViewH, kScreen_Height - 64);
+        _tableView.frame = CGRectMake(0, 0, tableViewH, kScreen_Height - DCTopNavH);
         _tableView.delegate = self;
         _tableView.dataSource = self;
         _tableView.showsVerticalScrollIndicator = NO;
@@ -79,7 +79,8 @@ static NSString *const DCBrandSortCellID = @"DCBrandSortCell";
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.showsHorizontalScrollIndicator = NO;
         _collectionView.alwaysBounceVertical = YES;
-        _collectionView.frame = CGRectMake(tableViewH + 5, 0, kScreen_Width - tableViewH - DCMargin, kScreen_Height - 64);
+        _collectionView.frame = CGRectMake(tableViewH + 5, 0, kScreen_Width - tableViewH - DCMargin, kScreen_Height - DCTopNavH);
+//        NSLog(@"%f---%d---%d", kScreen_Height,DCTopNavH,kDevice_Is_iPhoneX);
         //注册Cell
         [_collectionView registerClass:[DCGoodsSortCell class] forCellWithReuseIdentifier:DCGoodsSortCellID];
         [_collectionView registerClass:[DCBrandSortCell class] forCellWithReuseIdentifier:DCBrandSortCellID];

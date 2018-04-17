@@ -34,4 +34,8 @@ CGRect  CGRectMoveToCenter(CGRect rect, CGPoint center);
 - (void) fitInSize: (CGSize) aSize;
 
 +(instancetype)dc_viewFromXib;
+
++(void)tablevieiOS11:(UITableView*)tableView isHaveTabbar:(BOOL)ishaveTabbar;
++(void)collectionViewiOS11:(UICollectionView *)collectionView isHaveTabbar:(BOOL)ishaveTabbar;
+
 @end

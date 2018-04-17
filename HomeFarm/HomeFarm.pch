@@ -36,9 +36,17 @@
 
 #define kTableView_Height kDevice_Is_iPhoneX ? 88 : 64
 
-#define DCTopNavH kDevice_Is_iPhoneX ? 88 : 64
+#define DCNaviH 64
+
+#define DCTopNavH (kDevice_Is_iPhoneX ? 88 : 64)
 
 #define DCBottomTabH 49
+
+// 适配iPhone X Tabbar高度
+#define MC_TabbarHeight (kDevice_Is_iPhoneX ? (49.f+34.f) : 49.f)
+// 适配iPhone X Tabbar距离底部的距离
+#define MC_TabbarSafeBottomMargin (kDevice_Is_iPhoneX ? 34.f : 0.f)
+
 
 //全局背景色
 #define DCBGColor RGB(245,245,245)

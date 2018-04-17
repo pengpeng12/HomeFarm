@@ -88,6 +88,7 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
         _collectionView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - DCBottomTabH);
+        [UIView collectionViewiOS11:_collectionView isHaveTabbar:YES];
         _collectionView.showsVerticalScrollIndicator = NO;        //注册
         [_collectionView registerClass:[DCGoodsCountDownCell class] forCellWithReuseIdentifier:DCGoodsCountDownCellID];
         [_collectionView registerClass:[DCGoodsHandheldCell class] forCellWithReuseIdentifier:DCGoodsHandheldCellID];
@@ -114,6 +115,7 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     [self setUpBase];
     
     [self setUpNavTopView];
@@ -125,14 +127,17 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     [self setUpGIFRrfresh];
     
     [self getNetwork];
+    // Do any additional setup after loading the view.
+    
 }
+
 
 #pragma mark - initialize
 - (void)setUpBase
 {
     self.collectionView.backgroundColor = DCBGColor;
     
-    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
+    [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
 }
 
 
@@ -176,13 +181,13 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     [_backTopButton addTarget:self action:@selector(ScrollToTop) forControlEvents:UIControlEventTouchUpInside];
     [_backTopButton setImage:[UIImage imageNamed:@"btn_UpToTop"] forState:UIControlStateNormal];
     _backTopButton.hidden = YES;
-    _backTopButton.frame = CGRectMake(kScreen_Width - 50, kScreen_Height - 110, 40, 40);
+    _backTopButton.frame = CGRectMake(kScreen_Width - 50, kScreen_Height - DCTopNavH-44, 40, 40);
 }
 
 #pragma mark - 导航栏处理
 - (void)setUpNavTopView
 {
-    _topToolView = [[DCHomeTopToolView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, 64)];
+    _topToolView = [[DCHomeTopToolView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, DCTopNavH)];
     WEAKSELF
     _topToolView.leftItemClickBlock = ^{
         NSLog(@"点击了首页扫一扫");
@@ -414,12 +419,12 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     _backTopButton.hidden = (scrollView.contentOffset.y > kScreen_Height) ? NO : YES;//判断回到顶部按钮是否隐藏
     _topToolView.hidden = (scrollView.contentOffset.y < 0) ? YES : NO;//判断顶部工具View的显示和隐形
     
-    if (scrollView.contentOffset.y > DCTopNavH) {
+    if (scrollView.contentOffset.y > DCNaviH) {
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
-//        [[NSNotificationCenter defaultCenter]postNotificationName:SHOWTOPTOOLVIEW object:nil];
+        [[NSNotificationCenter defaultCenter]postNotificationName:SHOWTOPTOOLVIEW object:nil];
     }else{
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleLightContent;
-//        [[NSNotificationCenter defaultCenter]postNotificationName:HIDETOPTOOLVIEW object:nil];
+        [[NSNotificationCenter defaultCenter]postNotificationName:HIDETOPTOOLVIEW object:nil];
     }
 }
 
