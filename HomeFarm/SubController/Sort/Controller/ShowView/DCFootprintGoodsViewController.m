@@ -46,6 +46,7 @@ static NSString *DCFootprintCellID = @"DCFootprintCell";
         _tableView.dataSource = self;
         _tableView.delegate = self;
         _tableView.showsVerticalScrollIndicator = NO;
+        [UIView tablevieiOS11:_tableView isHaveTabbar:NO];
     
         [_tableView registerClass:[DCFootprintCell class] forCellReuseIdentifier:DCFootprintCellID];
     }
@@ -95,7 +96,7 @@ static NSString *DCFootprintCellID = @"DCFootprintCell";
     myFootLabel.font = PFR15Font;
     
     [_footprintView addSubview:myFootLabel];
-    myFootLabel.frame  = CGRectMake(0, 20, FootprintScreenW, 44);
+    myFootLabel.frame  = CGRectMake(0, kStatusBar_Height, FootprintScreenW, 44);
     
     _tableView.frame = CGRectMake(0, myFootLabel.bottom, FootprintScreenW, kScreen_Height - myFootLabel.bottom);
 }

@@ -74,7 +74,7 @@ typedef void(^XWTransitionAnimationConfig)(id<UIViewControllerContextTransitioni
 
 - (_XWTransitionObject *)toTransition{
     if (!_toTransition) {
-        WEAKSELF;
+        __weak typeof(self)weakSelf = self;
         _toTransition = [[_XWTransitionObject alloc] _initObjectWithDuration:_toDuration animationBlock:^(id<UIViewControllerContextTransitioning> transitionContext) {
             [weakSelf xw_setToAnimation:transitionContext];
         }];
@@ -84,7 +84,7 @@ typedef void(^XWTransitionAnimationConfig)(id<UIViewControllerContextTransitioni
 
 - (_XWTransitionObject *)backTranstion{
     if (!_backTranstion) {
-        WEAKSELF
+        __weak typeof(self)weakSelf = self;
         _backTranstion = [[_XWTransitionObject alloc] _initObjectWithDuration:_backDuration animationBlock:^(id<UIViewControllerContextTransitioning> transitionContext) {
             [weakSelf xw_setBackAnimation:transitionContext];
         }];

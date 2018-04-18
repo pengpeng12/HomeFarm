@@ -78,6 +78,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
         _collectionView.showsVerticalScrollIndicator = NO;
         _collectionView.delegate = self;
         _collectionView.dataSource = self;
+//        [UIView collectionViewiOS11:_collectionView isHaveTabbar:NO];
         
         [_collectionView registerClass:[DCCustionHeadView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:DCCustionHeadViewID]; //头部View
         [_collectionView registerClass:[DCSwitchGridCell class] forCellWithReuseIdentifier:DCSwitchGridCellID];//cell
@@ -169,13 +170,13 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     [_backTopButton addTarget:self action:@selector(ScrollToTop) forControlEvents:UIControlEventTouchUpInside];
     [_backTopButton setImage:[UIImage imageNamed:@"btn_UpToTop"] forState:UIControlStateNormal];
     _backTopButton.hidden = YES;
-    _backTopButton.frame = CGRectMake(kScreen_Width- 50,kScreen_Height - 60, 40, 40);
+    _backTopButton.frame = CGRectMake(kScreen_Width- 50,kScreen_Height - DCTopNavH, 40, 40);
     
     _footprintButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [self.view addSubview:_footprintButton];
     [_footprintButton addTarget:self action:@selector(footprintButtonClick) forControlEvents:UIControlEventTouchUpInside];
     [_footprintButton setImage:[UIImage imageNamed:@"ptgd_icon_zuji"] forState:UIControlStateNormal];
-    _footprintButton.frame = CGRectMake(kScreen_Width- 50,kScreen_Height - 60, 40, 40);
+    _footprintButton.frame = CGRectMake(kScreen_Width- 50,kScreen_Height -DCTopNavH-DCTopNavH, 40, 40);
 }
 
 #pragma mark - <UICollectionViewDataSource>
@@ -285,7 +286,7 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
     
     if(scrollView.contentOffset.y > _lastContentOffset){
         [self.navigationController setNavigationBarHidden:YES animated:YES];
-        self.collectionView.frame = CGRectMake(0, 20, kScreen_Width, kScreen_Height - 20);
+        self.collectionView.frame = CGRectMake(0, kStatusBar_Height, kScreen_Width, kScreen_Height - kStatusBar_Height);
         self.view.backgroundColor = [UIColor whiteColor];
     }else{
         [self.navigationController setNavigationBarHidden:NO animated:YES];
@@ -298,12 +299,12 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     //判断回到顶部按钮是否隐藏
-    _backTopButton.hidden = (scrollView.contentOffset.y > kScreen_Height) ? NO : YES;
+    _backTopButton.hidden = (scrollView.contentOffset.y > kScreen_Height-DCTopNavH) ? NO : YES;
 
     WEAKSELF
     [UIView animateWithDuration:0.25 animations:^{
         __strong typeof(weakSelf)strongSelf = weakSelf;
-        strongSelf.footprintButton.top = (strongSelf.backTopButton.hidden == YES) ? kScreen_Height - 60 : kScreen_Height - 110;
+        strongSelf.footprintButton.top = (strongSelf.backTopButton.hidden == YES) ? kScreen_Height - DCTopNavH : kScreen_Height -DCTopNavH - DCTopNavH;
     }];
     
 }
@@ -379,6 +380,8 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
 - (void)selfAlterViewback{
     
     [self dismissViewControllerAnimated:YES completion:nil];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    self.collectionView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - 64);
 }
 
 @end

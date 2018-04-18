@@ -194,9 +194,6 @@
 		9137B7F52082107B00DD4C33 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 9137B7842082107B00DD4C33 /* line.png */; };
 		9137B7F62082107B00DD4C33 /* mask.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9137B7852082107B00DD4C33 /* mask.jpg */; };
 		9137B7F72082107B00DD4C33 /* restrictedshine.tiff in Resources */ = {isa = PBXBuildFile; fileRef = 9137B7862082107B00DD4C33 /* restrictedshine.tiff */; };
-		9137B7F82082107B00DD4C33 /* SDBrowserImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B7892082107B00DD4C33 /* SDBrowserImageView.m */; };
-		9137B7F92082107B00DD4C33 /* SDPhotoBrowser.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B78B2082107B00DD4C33 /* SDPhotoBrowser.m */; };
-		9137B7FA2082107B00DD4C33 /* SDWaitingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B78E2082107B00DD4C33 /* SDWaitingView.m */; };
 		9137B7FB2082107B00DD4C33 /* XWCircleSpreadAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B7912082107B00DD4C33 /* XWCircleSpreadAnimator.m */; };
 		9137B7FC2082107B00DD4C33 /* XWCoolAnimator+XWExplode.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B7942082107B00DD4C33 /* XWCoolAnimator+XWExplode.m */; };
 		9137B7FD2082107B00DD4C33 /* XWCoolAnimator+XWFold.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B7962082107B00DD4C33 /* XWCoolAnimator+XWFold.m */; };
@@ -727,13 +724,6 @@
 		9137B7842082107B00DD4C33 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
 		9137B7852082107B00DD4C33 /* mask.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = mask.jpg; sourceTree = "<group>"; };
 		9137B7862082107B00DD4C33 /* restrictedshine.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = restrictedshine.tiff; sourceTree = "<group>"; };
-		9137B7882082107B00DD4C33 /* SDBrowserImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDBrowserImageView.h; sourceTree = "<group>"; };
-		9137B7892082107B00DD4C33 /* SDBrowserImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDBrowserImageView.m; sourceTree = "<group>"; };
-		9137B78A2082107B00DD4C33 /* SDPhotoBrowser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowser.h; sourceTree = "<group>"; };
-		9137B78B2082107B00DD4C33 /* SDPhotoBrowser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDPhotoBrowser.m; sourceTree = "<group>"; };
-		9137B78C2082107B00DD4C33 /* SDPhotoBrowserConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDPhotoBrowserConfig.h; sourceTree = "<group>"; };
-		9137B78D2082107B00DD4C33 /* SDWaitingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDWaitingView.h; sourceTree = "<group>"; };
-		9137B78E2082107B00DD4C33 /* SDWaitingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDWaitingView.m; sourceTree = "<group>"; };
 		9137B7902082107B00DD4C33 /* XWCircleSpreadAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XWCircleSpreadAnimator.h; sourceTree = "<group>"; };
 		9137B7912082107B00DD4C33 /* XWCircleSpreadAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XWCircleSpreadAnimator.m; sourceTree = "<group>"; };
 		9137B7932082107B00DD4C33 /* XWCoolAnimator+XWExplode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "XWCoolAnimator+XWExplode.h"; sourceTree = "<group>"; };
@@ -2051,7 +2041,6 @@
 				9137B7772082107B00DD4C33 /* Category */,
 				9137B77E2082107B00DD4C33 /* Main */,
 				9137B7832082107B00DD4C33 /* Resoures */,
-				9137B7872082107B00DD4C33 /* SDPhotoBrowser */,
 				9137B78F2082107B00DD4C33 /* XWCircleSpreadAnimator */,
 				9137B7922082107B00DD4C33 /* XWCoolAnimator */,
 				9137B7A32082107B00DD4C33 /* XWDrawerAnimator */,
@@ -2093,20 +2082,6 @@
 				9137B7862082107B00DD4C33 /* restrictedshine.tiff */,
 			);
 			path = Resoures;
-			sourceTree = "<group>";
-		};
-		9137B7872082107B00DD4C33 /* SDPhotoBrowser */ = {
-			isa = PBXGroup;
-			children = (
-				9137B7882082107B00DD4C33 /* SDBrowserImageView.h */,
-				9137B7892082107B00DD4C33 /* SDBrowserImageView.m */,
-				9137B78A2082107B00DD4C33 /* SDPhotoBrowser.h */,
-				9137B78B2082107B00DD4C33 /* SDPhotoBrowser.m */,
-				9137B78C2082107B00DD4C33 /* SDPhotoBrowserConfig.h */,
-				9137B78D2082107B00DD4C33 /* SDWaitingView.h */,
-				9137B78E2082107B00DD4C33 /* SDWaitingView.m */,
-			);
-			path = SDPhotoBrowser;
 			sourceTree = "<group>";
 		};
 		9137B78F2082107B00DD4C33 /* XWCircleSpreadAnimator */ = {
@@ -3064,7 +3039,6 @@
 				9137B9272084434C00DD4C33 /* TZVideoPlayerController.m in Sources */,
 				9137B7F32082107B00DD4C33 /* XWInteractiveTransition.m in Sources */,
 				9137B7F22082107B00DD4C33 /* UIViewController+XWTransition.m in Sources */,
-				9137B7F92082107B00DD4C33 /* SDPhotoBrowser.m in Sources */,
 				9137B8A52084395900DD4C33 /* DCGoodsSortCell.m in Sources */,
 				9137B6D72082036900DD4C33 /* DCNewFeatureViewController.m in Sources */,
 				9137B69D2082034100DD4C33 /* DCMyCenterViewController.m in Sources */,
@@ -3183,7 +3157,6 @@
 				9137B7D52082107B00DD4C33 /* WJYAlertView.m in Sources */,
 				9114CB09207CC0F200A2A26F /* UIImageView+HighlightedWebCache.m in Sources */,
 				9137B91B2084434C00DD4C33 /* TZAssetCell.m in Sources */,
-				9137B7F82082107B00DD4C33 /* SDBrowserImageView.m in Sources */,
 				9133BF1E208498190022C55E /* IQTextView.m in Sources */,
 				9137B8052082107B00DD4C33 /* XWFilterAnimator+XWBarSwipe.m in Sources */,
 				9137B9242084434C00DD4C33 /* TZPhotoPreviewCell.m in Sources */,
@@ -3194,7 +3167,6 @@
 				9137B7EE2082107B00DD4C33 /* PPNumberButton.m in Sources */,
 				9137B91A2084434C00DD4C33 /* NSBundle+TZImagePicker.m in Sources */,
 				9114CAF7207CC0F200A2A26F /* SDWebImageCoder.m in Sources */,
-				9137B7FA2082107B00DD4C33 /* SDWaitingView.m in Sources */,
 				9137B8572084334000DD4C33 /* FMDatabasePool.m in Sources */,
 				D74540D2207BBDA000B6C497 /* NSString+MJExtension.m in Sources */,
 				9137B7CF2082107B00DD4C33 /* DCSelPhotos.m in Sources */,

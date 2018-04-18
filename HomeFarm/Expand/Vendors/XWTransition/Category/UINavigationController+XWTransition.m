@@ -39,7 +39,7 @@
     @synchronized(swizzleClass) {
         SEL deallocSelector = sel_registerName("dealloc");
         __block void (*originalDealloc)(__unsafe_unretained id, SEL) = NULL;
-        WEAKSELF
+        __weak typeof(self)weakSelf = self;
         id newDealloc = ^(__unsafe_unretained UIViewController *objSelf){
             [weakSelf _xw_checkDelegate];
             if (originalDealloc == NULL) {
