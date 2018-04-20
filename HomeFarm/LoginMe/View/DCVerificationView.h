@@ -13,7 +13,5 @@
 /* 登录/注册 */
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
-/* 协议 */
-@property (weak, nonatomic) IBOutlet UILabel *agreementLabel;
 
 @end

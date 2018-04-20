@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DCBaseSetViewController.h"
 
-@interface YXMyViewController : UIViewController
+@interface YXMyViewController : DCBaseSetViewController
 
 @end

@@ -160,7 +160,7 @@
 - (IBAction)registAccount {
     
     DCRegisteredViewController *dcRegistVc = [DCRegisteredViewController new];
-    [self.navigationController pushViewController:dcRegistVc animated:YES];
+    [self presentViewController:dcRegistVc animated:YES completion:nil];
 }
 
 #pragma mark - 退出当前界面
@@ -168,10 +168,7 @@
     
     [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
-
-//    if (self.tabBarController.selectedIndex == DCTabBarControllerPerson) { //判断选择控制器为登录控制器
-        self.tabBarController.selectedIndex = 0; //跳转到首页去
-//    }
+    
 }
 
 

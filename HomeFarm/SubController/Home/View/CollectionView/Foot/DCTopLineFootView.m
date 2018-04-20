@@ -48,7 +48,7 @@
 - (void)setUpUI
 {
     
-    _topAdImageView = [[UIImageView alloc] init];
+    _topAdImageView = [[FLAnimatedImageView alloc] init];
     [_topAdImageView sd_setImageWithURL:[NSURL URLWithString:HomeBottomViewGIFImage]];
     _topAdImageView.contentMode = UIViewContentModeScaleAspectFit;
     [self addSubview:_topAdImageView];

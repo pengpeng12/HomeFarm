@@ -312,6 +312,7 @@
 		9137B9282084434C00DD4C33 /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B9192084434C00DD4C33 /* UIView+Layout.m */; };
 		9137B92C2084443D00DD4C33 /* DCNotificationCenterName.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B92B2084443D00DD4C33 /* DCNotificationCenterName.m */; };
 		9137B92F208445AB00DD4C33 /* UIColor+DCColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B92E208445AB00DD4C33 /* UIColor+DCColorChange.m */; };
+		914D9CFE2089E64E005A5626 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914D9CFC2089E64D005A5626 /* AgreementViewController.m */; };
 		915C6A362084BE8200AA16F7 /* CommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C6A352084BE8200AA16F7 /* CommodityViewController.m */; };
 		D745360D207B13C000B6C497 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D745360A207B13C000B6C497 /* README.txt */; };
 		D745360E207B13C000B6C497 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D745360C207B13C000B6C497 /* libWeChatSDK.a */; };
@@ -930,6 +931,8 @@
 		9137B92B2084443D00DD4C33 /* DCNotificationCenterName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCNotificationCenterName.m; sourceTree = "<group>"; };
 		9137B92D208445AB00DD4C33 /* UIColor+DCColorChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DCColorChange.h"; sourceTree = "<group>"; };
 		9137B92E208445AB00DD4C33 /* UIColor+DCColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DCColorChange.m"; sourceTree = "<group>"; };
+		914D9CFC2089E64D005A5626 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
+		914D9CFD2089E64E005A5626 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
 		915C6A342084BE8200AA16F7 /* CommodityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommodityViewController.h; sourceTree = "<group>"; };
 		915C6A352084BE8200AA16F7 /* CommodityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommodityViewController.m; sourceTree = "<group>"; };
 		D7453608207B13C000B6C497 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1649,6 +1652,8 @@
 				9137B6BF2082036800DD4C33 /* DCLoginViewController.xib */,
 				9137B6C02082036800DD4C33 /* DCRegisteredViewController.h */,
 				9137B6C12082036800DD4C33 /* DCRegisteredViewController.m */,
+				914D9CFD2089E64E005A5626 /* AgreementViewController.h */,
+				914D9CFC2089E64D005A5626 /* AgreementViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -3242,6 +3247,7 @@
 				9137B71020820E1000DD4C33 /* DCYouLikeHeadView.m in Sources */,
 				9137B8F920843D2700DD4C33 /* NetworkUnit.m in Sources */,
 				D74540CB207BBDA000B6C497 /* MJPropertyType.m in Sources */,
+				914D9CFE2089E64E005A5626 /* AgreementViewController.m in Sources */,
 				9137B70A20820E1000DD4C33 /* DCNewWelfareCell.m in Sources */,
 				9137B7CA2082107B00DD4C33 /* DCZuoWenRightButton.m in Sources */,
 				9137B7D42082107B00DD4C33 /* UIPlaceHolderTextView.m in Sources */,
@@ -3395,6 +3401,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = Y39UHY9C7M;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HomeFarm/AlipaySDK",
@@ -3421,6 +3428,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = Y39UHY9C7M;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HomeFarm/AlipaySDK",

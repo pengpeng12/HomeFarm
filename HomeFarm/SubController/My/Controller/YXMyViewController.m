@@ -7,18 +7,51 @@
 //
 
 #import "YXMyViewController.h"
+#import "DCLoginViewController.h"
+#import "DCCenterTopToolView.h"
+#import "DCSettingViewController.h"
 
 @interface YXMyViewController ()
 
+/* 顶部Nva */
+@property (strong , nonatomic)DCCenterTopToolView *topToolView;
 @end
 
 @implementation YXMyViewController
 
+#pragma mark - 导航栏处理
+
+- (void)setUpNavTopView
+{
+    _topToolView = [[DCCenterTopToolView alloc] initWithFrame:CGRectMake(0, 0, kScreen_Width, DCTopNavH)];
+    WEAKSELF
+    _topToolView.leftItemClickBlock = ^{ //点击了扫描
+        
+    };
+    _topToolView.rightItemClickBlock = ^{ //点击设置
+        DCSettingViewController *dcSetVc = [DCSettingViewController new];
+        [weakSelf.navigationController pushViewController:dcSetVc animated:YES];
+    };
+    
+    [self.view addSubview:_topToolView];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor = [UIColor blackColor];
     self.title = @"我的";
+    self.navigationController.navigationBar.hidden = YES;
+    [self setUpNavTopView];
+    
+//    if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
+//
+//        DCLoginViewController *dcLoginVc = [DCLoginViewController new];
+//        [self.navigationController pushViewController:dcLoginVc animated:YES];
+//    }
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

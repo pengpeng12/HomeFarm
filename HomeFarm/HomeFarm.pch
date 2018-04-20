@@ -36,8 +36,6 @@
 
 #define kTableView_Height (kDevice_Is_iPhoneX ? 88 : 64)
 
-#define DCNaviH 64
-
 #define DCTopNavH (kDevice_Is_iPhoneX ? 88 : 64)
 
 #define DCBottomTabH 49
@@ -77,6 +75,7 @@
 
 #import "UIViewExt.h"
 #import "SDWebImageManager.h"
+#import "FLAnimatedImage.h"
 #import "SDCycleScrollView.h"
 #import "UIImageView+WebCache.h"
 #import "MBProgressHUD.h"

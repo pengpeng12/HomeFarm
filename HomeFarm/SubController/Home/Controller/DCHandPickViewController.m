@@ -7,6 +7,7 @@
 //
 
 #import "DCHandPickViewController.h"
+#import "AgreementViewController.h"
 
 // Controllers
 #import "FHNavigationController.h"
@@ -171,6 +172,10 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
 {
     _gridItem = [DCGridItem mj_objectArrayWithFilename:@"GoodsGrid.plist"];
     _youLikeItem = [DCRecommendItem mj_objectArrayWithFilename:@"HomeHighGoods.plist"];
+    // 将模型数组转为字典数组
+    NSArray *youlikeArray = [DCRecommendItem mj_keyValuesArrayWithObjectArray:_youLikeItem];
+    NSDictionary *youlikeData = @{@"data": youlikeArray};
+    NSLog(@"%@", youlikeData);
 }
 
 #pragma mark - 滚回顶部
@@ -193,6 +198,8 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
         NSLog(@"点击了首页扫一扫");
 //        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
 //        [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
+        AgreementViewController *agreeVC = [[AgreementViewController alloc]init];
+        [weakSelf.navigationController pushViewController:agreeVC animated:YES];
     };
     _topToolView.rightItemClickBlock = ^{
         NSLog(@"点击了首页分类");
@@ -419,7 +426,7 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     _backTopButton.hidden = (scrollView.contentOffset.y > kScreen_Height) ? NO : YES;//判断回到顶部按钮是否隐藏
     _topToolView.hidden = (scrollView.contentOffset.y < 0) ? YES : NO;//判断顶部工具View的显示和隐形
     
-    if (scrollView.contentOffset.y > DCNaviH) {
+    if (scrollView.contentOffset.y > DCTopNavH) {
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
         [[NSNotificationCenter defaultCenter]postNotificationName:SHOWTOPTOOLVIEW object:nil];
     }else{
