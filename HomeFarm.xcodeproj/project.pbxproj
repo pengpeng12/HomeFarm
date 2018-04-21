@@ -313,6 +313,8 @@
 		9137B92C2084443D00DD4C33 /* DCNotificationCenterName.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B92B2084443D00DD4C33 /* DCNotificationCenterName.m */; };
 		9137B92F208445AB00DD4C33 /* UIColor+DCColorChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 9137B92E208445AB00DD4C33 /* UIColor+DCColorChange.m */; };
 		914D9CFE2089E64E005A5626 /* AgreementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914D9CFC2089E64D005A5626 /* AgreementViewController.m */; };
+		914D9D01208ADBA6005A5626 /* MyCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914D9D00208ADBA5005A5626 /* MyCenterViewController.m */; };
+		914D9D04208AFD9A005A5626 /* MyCenterTopToolView.m in Sources */ = {isa = PBXBuildFile; fileRef = 914D9D03208AFD9A005A5626 /* MyCenterTopToolView.m */; };
 		915C6A362084BE8200AA16F7 /* CommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C6A352084BE8200AA16F7 /* CommodityViewController.m */; };
 		D745360D207B13C000B6C497 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D745360A207B13C000B6C497 /* README.txt */; };
 		D745360E207B13C000B6C497 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D745360C207B13C000B6C497 /* libWeChatSDK.a */; };
@@ -933,6 +935,10 @@
 		9137B92E208445AB00DD4C33 /* UIColor+DCColorChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DCColorChange.m"; sourceTree = "<group>"; };
 		914D9CFC2089E64D005A5626 /* AgreementViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AgreementViewController.m; sourceTree = "<group>"; };
 		914D9CFD2089E64E005A5626 /* AgreementViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AgreementViewController.h; sourceTree = "<group>"; };
+		914D9CFF208ADBA5005A5626 /* MyCenterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterViewController.h; sourceTree = "<group>"; };
+		914D9D00208ADBA5005A5626 /* MyCenterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterViewController.m; sourceTree = "<group>"; };
+		914D9D02208AFD9A005A5626 /* MyCenterTopToolView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyCenterTopToolView.h; sourceTree = "<group>"; };
+		914D9D03208AFD9A005A5626 /* MyCenterTopToolView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyCenterTopToolView.m; sourceTree = "<group>"; };
 		915C6A342084BE8200AA16F7 /* CommodityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommodityViewController.h; sourceTree = "<group>"; };
 		915C6A352084BE8200AA16F7 /* CommodityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommodityViewController.m; sourceTree = "<group>"; };
 		D7453608207B13C000B6C497 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1483,6 +1489,8 @@
 			children = (
 				9137B65E2082034000DD4C33 /* DCMyCenterViewController.h */,
 				9137B65F2082034000DD4C33 /* DCMyCenterViewController.m */,
+				914D9CFF208ADBA5005A5626 /* MyCenterViewController.h */,
+				914D9D00208ADBA5005A5626 /* MyCenterViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -1528,6 +1536,8 @@
 			children = (
 				9137B6712082034000DD4C33 /* DCCenterTopToolView.h */,
 				9137B6722082034000DD4C33 /* DCCenterTopToolView.m */,
+				914D9D02208AFD9A005A5626 /* MyCenterTopToolView.h */,
+				914D9D03208AFD9A005A5626 /* MyCenterTopToolView.m */,
 				9137B6732082034000DD4C33 /* DCMyCenterHeaderView.h */,
 				9137B6742082034000DD4C33 /* DCMyCenterHeaderView.m */,
 				9137B6752082034000DD4C33 /* DCMyCenterHeaderView.xib */,
@@ -3069,6 +3079,7 @@
 				9133BF17208498190022C55E /* IQNSArray+Sort.m in Sources */,
 				9114CB05207CC0F200A2A26F /* UIImage+ForceDecode.m in Sources */,
 				9114CAF8207CC0F200A2A26F /* SDWebImageCoderHelper.m in Sources */,
+				914D9D04208AFD9A005A5626 /* MyCenterTopToolView.m in Sources */,
 				D74540DC207BBDA000B6C497 /* View+MASAdditions.m in Sources */,
 				9133BF18208498190022C55E /* IQUIScrollView+Additions.m in Sources */,
 				9137B7EF2082107B00DD4C33 /* UIView+Toast.m in Sources */,
@@ -3224,6 +3235,7 @@
 				9137B8862084394E00DD4C33 /* DCClassMianItem.m in Sources */,
 				9137B8282082125800DD4C33 /* DCRecommendItem.m in Sources */,
 				9137B8562084334000DD4C33 /* FMDatabaseAdditions.m in Sources */,
+				914D9D01208ADBA6005A5626 /* MyCenterViewController.m in Sources */,
 				9137B80C2082107B00DD4C33 /* XWFilterAnimator+XWRipple.m in Sources */,
 				9137B86F2084352500DD4C33 /* SDCollectionViewCell.m in Sources */,
 				9137B7EC2082107B00DD4C33 /* GQGesVCTransition.m in Sources */,

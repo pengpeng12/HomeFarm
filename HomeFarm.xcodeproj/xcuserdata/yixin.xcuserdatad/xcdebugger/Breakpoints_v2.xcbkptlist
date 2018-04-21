@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "HomeFarm/SubController/Home/Controller/DCHandPickViewController.m"
-            timestampString = "545921842.314535"
+            timestampString = "546001350.380971"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "178"
-            endingLineNumber = "178"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-setUpGoodsData"
             landmarkType = "7">
          </BreakpointContent>

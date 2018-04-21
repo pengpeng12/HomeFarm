@@ -8,6 +8,7 @@
 
 #import "FHTabBarController.h"
 #import "FHNavigationController.h"
+
 #import "DCLoginViewController.h"
 
 #import "YXHomeViewController.h"
@@ -100,9 +101,11 @@
             [self presentViewController:dcLoginVc animated:YES completion:nil];
             return NO;
         }
+        
     }
     return YES;
 }
+
 - (void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item
 {
     NSLog(@"点击了第%ld个item", item.tag);

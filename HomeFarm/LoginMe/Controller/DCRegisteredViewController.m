@@ -47,9 +47,7 @@
     //返回按钮
     UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(20, kStatusBar_Height + 10, 30, 30)];
     backButton.titleLabel.font = [UIFont systemFontOfSize:18];
-    [backButton setTitle:@"X" forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [backButton setImage:[UIImage imageNamed:@"address4_guanbi"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     [backButton addTarget:self action:@selector(dissmissClick) forControlEvents:UIControlEventTouchUpInside];
     
@@ -72,6 +70,7 @@
 }
 - (void)dissmissClick
 {
+    [self.view endEditing:YES];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 - (void)agreementClick

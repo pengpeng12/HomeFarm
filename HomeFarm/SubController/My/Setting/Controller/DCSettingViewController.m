@@ -9,7 +9,7 @@
 #import "DCSettingViewController.h"
 
 // Controllers
-#import "DCReceivingAddressViewController.h" //收获地址
+#import "DCReceivingAddressViewController.h" //收货地址
 #import "DCLoginViewController.h" //登录
 // Models
 
@@ -47,7 +47,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
         _tableView.delegate = self;
         _tableView.dataSource = self;
         
-        _tableView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH);
+        _tableView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - DCTopNavH);
         [self.view addSubview:_tableView];
         
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCUserMgCell class]) bundle:nil] forCellReuseIdentifier:DCUserMgCellID];
@@ -87,7 +87,7 @@ static NSString *const DCUserMgCellID = @"DCUserMgCell";
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.title = @"账户管理";
     self.automaticallyAdjustsScrollViewInsets = NO;
-    NSArray *titleArray = @[@"会员俱乐部",@"收货地址",@"实名认证",@"账户安全"];
+    NSArray *titleArray = @[@"会员俱乐部",@"地址管理",@"实名认证",@"账户安全"];
     NSArray *subTitleArray = @[@"",@"",@"未认证",@"安全认证：中"];
     self.userMgItem = [NSArray arrayWithObjects:titleArray,subTitleArray, nil];
 }

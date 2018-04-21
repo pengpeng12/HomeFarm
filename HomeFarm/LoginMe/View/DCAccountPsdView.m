@@ -29,7 +29,6 @@
 /* 登录 */
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
-@property (weak, nonatomic) IBOutlet UILabel *agreementLabel;
 
 @end
 
@@ -53,8 +52,6 @@
     [_userPasswordField addTarget:self action:@selector(textFieldDidBeginEditing:) forControlEvents:UIControlEventEditingChanged];
     _userNameField.text = ([DCObjManager dc_readUserDataForKey:@"UserName"] == nil) ? nil : [DCObjManager dc_readUserDataForKey:@"UserName"];
     
-    [DCSpeedy dc_setSomeOneChangeColor:_agreementLabel SetSelectArray:@[@"《",@"》",@"服",@"务",@"协",@"议"] SetChangeColor:RGB(56, 152, 181)];
-    
 }
 
 
@@ -65,7 +62,7 @@
     [SVProgressHUD show];
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleDark];
     WEAKSELF
-    if ([self.userNameField.text isEqualToString:@"CDDMall"] && [self.userPasswordField.text isEqualToString:@"000"]) {
+    if ([self.userNameField.text isEqualToString:@"123"] && [self.userPasswordField.text isEqualToString:@"000"]) {
         
         [DCObjManager dc_saveUserData:@"1" forKey:@"isLogin"]; //1代表登录
         [DCObjManager dc_saveUserData:self.userNameField.text forKey:@"UserName"]; //记录用户名

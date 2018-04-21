@@ -33,6 +33,7 @@
 /* headView */
 @property (strong , nonatomic)DCNewAdressView *adressHeadView;
 @property (weak, nonatomic) IBOutlet UIButton *saveChangeButton;
+@property (strong , nonatomic)UIButton *defaultBtn;
 
 @end
 
@@ -45,8 +46,7 @@
         _tableView = [[UITableView alloc] initWithFrame:CGRectZero];
         _tableView.delegate = self;
         _tableView.dataSource = self;
-        
-        _tableView.frame = CGRectMake(0, DCTopNavH + 20, kScreen_Width, kScreen_Height - (DCTopNavH + 20 + 45));
+        _tableView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - DCTopNavH - 44);
         [self.view addSubview:_tableView];
         
         [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
@@ -63,6 +63,8 @@
     [self setUpBase];
     
     [self setUpHeadView];
+    
+    [self setUpFootView];
 }
 
 - (void)setUpBase
@@ -96,7 +98,6 @@
     _adressHeadView.frame = CGRectMake(0, 0, kScreen_Width, 210);
     
     self.tableView.tableHeaderView = _adressHeadView;
-    self.tableView.tableFooterView = [UIView new];
     
     if (_saveType == DCSaveAdressChangeType) { //编辑
         _adressHeadView.rePersonField.text = _adressItem.userName;
@@ -123,7 +124,42 @@
     };
 }
 
-
+- (void)setUpFootView
+{
+    UIView *FootView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width, 50)];
+    FootView.backgroundColor = [UIColor whiteColor];
+    self.defaultBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreen_Width*0.25, 15, kScreen_Width*0.5, 20)];
+    self.defaultBtn.backgroundColor = [UIColor whiteColor];
+    self.defaultBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [self.defaultBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [self.defaultBtn setImage:[UIImage imageNamed:@"default_normal"] forState:UIControlStateNormal];
+    [self.defaultBtn setImage:[UIImage imageNamed:@"default_select"] forState:UIControlStateSelected];
+    [self.defaultBtn setTitle:@" 设为默认收货地址" forState:UIControlStateNormal];
+    [self.defaultBtn addTarget:self action:@selector(defaltBtnClick:) forControlEvents:UIControlEventTouchUpInside];
+    if (self.adressItem && [self.adressItem.isDefault isEqualToString:@"2"]) {
+        self.defaultBtn.selected = YES;
+    }
+    [FootView addSubview:self.defaultBtn];
+    
+    CGFloat lineH = 1.0/[UIScreen mainScreen].scale;
+    UILabel *Line =  [[UILabel alloc]initWithFrame:CGRectMake(10, 0, kScreen_Width, lineH)];
+    Line.backgroundColor = [UIColor lightGrayColor];
+    [FootView addSubview:Line];
+    
+    self.tableView.tableFooterView = FootView;
+    
+}
+- (void)defaltBtnClick:(UIButton *)button
+{
+    button.selected = !button.selected;
+    if (button.selected) {
+        //选中默认
+        NSLog(@"--选中默认");
+    }else{
+        //取消默认
+        NSLog(@"--取消默认");
+    }
+}
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -166,6 +202,18 @@
     adressItem.userAdress = _adressHeadView.detailTextView.text;
     adressItem.chooseAdress = _adressHeadView.addressLabel.text;
     adressItem.isDefault = @"1"; // 默认不选择
+    if (self.defaultBtn.selected == YES) {
+        adressItem.isDefault = @"2";
+        
+        //更新其他的地址为非默认（数据提交服务器）
+        NSMutableArray<DCAdressItem *> *adItem = [NSMutableArray array];
+        adItem = [[DCAdressDateBase sharedDataBase] getAllAdressItem]; //本地数据库
+        for (NSInteger i = 0; i < adItem.count; i++) {
+            DCAdressItem *adressItemtemp = adItem[i];
+            adressItemtemp.isDefault = @"1";
+            [[DCAdressDateBase sharedDataBase]updateAdress:adressItemtemp];
+        }
+    }
     if (_saveType == DCSaveAdressNewType) { //新建
         [[DCAdressDateBase sharedDataBase]addNewAdress:adressItem];
         
@@ -182,6 +230,7 @@
         [SVProgressHUD dismiss];
         [weakSelf.view makeToast:@"保存成功" duration:0.5 position:CSToastPositionCenter];
         [DCObjManager dc_removeUserDataForkey:@"StoreAddress"];
+        
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UpDateUI" object:nil];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [weakSelf.navigationController popViewControllerAnimated:YES];
@@ -210,7 +259,7 @@
 - (ChooseLocationView *)chooseLocationView{
     
     if (!_chooseLocationView) {
-        _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, kScreen_Height - 350, kScreen_Width, 350)];
+        _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, kScreen_Height -DCTopNavH - 350, kScreen_Width, 350)];
         
     }
     return _chooseLocationView;
@@ -242,14 +291,16 @@
 {
     [self.view endEditing:YES];
     
-    if (_adressHeadView.rePersonField.text.length == 0 && _adressHeadView.rePhoneField.text.length == 0 && _adressHeadView.addressLabel.text.length == 0 && _adressHeadView.detailTextView.text.length == 0) {
-        [self.view makeToast:@"当前编辑为空" duration:0.5 position:CSToastPositionCenter];
-        return;
-    }
-    NSString *adress = (_adressHeadView.addressLabel.text == nil) ? @"" : _adressHeadView.addressLabel.text; //取空
-    NSArray *storeAddress = @[_adressHeadView.rePersonField.text,_adressHeadView.rePhoneField.text,adress,_adressHeadView.detailTextView.text];
-    [DCObjManager dc_saveUserData:storeAddress forKey:@"StoreAddress"];
-    [self.view makeToast:@"保存成功" duration:0.5 position:CSToastPositionCenter];
+//    if (_adressHeadView.rePersonField.text.length == 0 && _adressHeadView.rePhoneField.text.length == 0 && _adressHeadView.addressLabel.text.length == 0 && _adressHeadView.detailTextView.text.length == 0) {
+//        [self.view makeToast:@"当前编辑为空" duration:0.5 position:CSToastPositionCenter];
+//        return;
+//    }
+//    NSString *adress = (_adressHeadView.addressLabel.text == nil) ? @"" : _adressHeadView.addressLabel.text; //取空
+//    NSArray *storeAddress = @[_adressHeadView.rePersonField.text,_adressHeadView.rePhoneField.text,adress,_adressHeadView.detailTextView.text];
+//    [DCObjManager dc_saveUserData:storeAddress forKey:@"StoreAddress"];
+//    [self.view makeToast:@"保存成功" duration:0.5 position:CSToastPositionCenter];
+    
+    [self saveNewAdressClick];
 }
 
 @end

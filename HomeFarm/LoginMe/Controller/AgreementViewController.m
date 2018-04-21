@@ -8,7 +8,7 @@
 
 #import "AgreementViewController.h"
 
-@interface AgreementViewController ()
+@interface AgreementViewController ()<UIWebViewDelegate>
 
 @end
 
@@ -20,13 +20,10 @@
     self.view.backgroundColor = [UIColor whiteColor];
     self.title=@"用户协议";
     
-    
     //返回按钮
     UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(20, kStatusBar_Height + 10, 30, 30)];
     backButton.titleLabel.font = [UIFont systemFontOfSize:18];
-    [backButton setTitle:@"X" forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
-    [backButton setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
+    [backButton setImage:[UIImage imageNamed:@"address4_guanbi"] forState:UIControlStateNormal];
     [self.view addSubview:backButton];
     [backButton addTarget:self action:@selector(dissmissClick) forControlEvents:UIControlEventTouchUpInside];
     
@@ -36,6 +33,18 @@
     [self.view addSubview:agreeWebView];
     NSURL *url = [NSURL URLWithString:@"http://192.168.0.136:8020/project/exin/protocol.html?__hbt=1524134143508"];
     [agreeWebView loadRequest:[NSURLRequest requestWithURL:url]];
+    agreeWebView.delegate = self;
+    
+    [MBProgressHUD showHUDAddedTo:agreeWebView animated:YES];
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    [MBProgressHUD hideHUDForView:webView animated:YES];
+}
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
+{
+    NSLog(@"加载错误%@",error);
 }
 
 - (void)dissmissClick
@@ -48,14 +57,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -53,29 +53,13 @@ static NSString *const DCUserAdressCellID = @"DCUserAdressCell";
         
         [_tableView registerNib:[UINib nibWithNibName:NSStringFromClass([DCUserAdressCell class]) bundle:nil] forCellReuseIdentifier:DCUserAdressCellID];
         
-        _tableView.frame = CGRectMake(0, DCTopNavH, kScreen_Width, kScreen_Height - DCTopNavH);
+        _tableView.frame = CGRectMake(0, 0, kScreen_Width, kScreen_Height - DCTopNavH - 44);
         
         [self.view addSubview:_tableView];
         
     }
     return _tableView;
 }
-
-- (DCUpDownButton *)bgTipButton
-{
-    if (!_bgTipButton) {
-        
-        _bgTipButton = [DCUpDownButton buttonWithType:UIButtonTypeCustom];
-        [_bgTipButton setImage:[UIImage imageNamed:@"MG_Empty_dizhi"] forState:UIControlStateNormal];
-        _bgTipButton.titleLabel.font = PFR13Font;
-        [_bgTipButton setTitleColor:[UIColor darkGrayColor] forState:UIControlStateNormal];
-        [_bgTipButton setTitle:@"您还没有收货地址" forState:UIControlStateNormal];
-        _bgTipButton.frame = CGRectMake((kScreen_Width - 150) * 1/2 , (kScreen_Height - 150) * 1/2 , 150, 150);
-        _bgTipButton.adjustsImageWhenHighlighted = false;
-    }
-    return _bgTipButton;
-}
-
 
 - (NSMutableArray<DCAdressItem *> *)adItem
 {
@@ -99,6 +83,20 @@ static NSString *const DCUserAdressCellID = @"DCUserAdressCell";
     [self setUpBase];
 
     [self setUpAccNote];
+    //添加按钮
+    [self setUpBottomButton];
+}
+
+- (void)setUpBottomButton
+{
+    UIButton *addbutton = [[UIButton alloc] initWithFrame:CGRectMake(0, kScreen_Height - DCTopNavH-44, kScreen_Width, 44)];
+    addbutton.backgroundColor = RGB(221, 37, 25);
+    addbutton.titleLabel.font = [UIFont systemFontOfSize:16];
+    [addbutton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [addbutton setTitle:@"+创建收货地址" forState:UIControlStateNormal];
+    [addbutton addTarget:self action:@selector(addButtonBarItemClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:addbutton];
+    
 }
 
 - (void)setUpAccNote
@@ -116,22 +114,22 @@ static NSString *const DCUserAdressCellID = @"DCUserAdressCell";
     self.title = @"收货地址";
     self.view.backgroundColor = DCBGColor;
     self.automaticallyAdjustsScrollViewInsets = NO;
-    [self.view addSubview:self.bgTipButton];
+    
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.tableView.tableFooterView = [UIView new];
     self.adItem = [[DCAdressDateBase sharedDataBase] getAllAdressItem]; //本地数据库
     
-    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    negativeSpacer.width = -15;
-    
-    UIButton *button = [[UIButton alloc] init];
-    [button setImage:[UIImage imageNamed:@"nav_btn_tianjia"] forState:UIControlStateNormal];
-    [button setImage:[UIImage imageNamed:@"nav_btn_tianjia"] forState:UIControlStateHighlighted];
-    button.frame = CGRectMake(0, 0, 44, 44);
-    [button addTarget:self action:@selector(addButtonBarItemClick) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:button];
-    
-    self.navigationItem.rightBarButtonItems = @[negativeSpacer, backButton];
+//    UIBarButtonItem *negativeSpacer = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
+//    negativeSpacer.width = -15;
+//
+//    UIButton *button = [[UIButton alloc] init];
+//    [button setImage:[UIImage imageNamed:@"nav_btn_tianjia"] forState:UIControlStateNormal];
+//    [button setImage:[UIImage imageNamed:@"nav_btn_tianjia"] forState:UIControlStateHighlighted];
+//    button.frame = CGRectMake(0, 0, 44, 44);
+//    [button addTarget:self action:@selector(addButtonBarItemClick) forControlEvents:UIControlEventTouchUpInside];
+//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+//
+//    self.navigationItem.rightBarButtonItems = @[negativeSpacer, backButton];
 }
 
 

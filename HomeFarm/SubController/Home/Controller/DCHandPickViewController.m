@@ -7,7 +7,6 @@
 //
 
 #import "DCHandPickViewController.h"
-#import "AgreementViewController.h"
 
 // Controllers
 #import "FHNavigationController.h"
@@ -198,8 +197,6 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
         NSLog(@"点击了首页扫一扫");
 //        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
 //        [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
-        AgreementViewController *agreeVC = [[AgreementViewController alloc]init];
-        [weakSelf.navigationController pushViewController:agreeVC animated:YES];
     };
     _topToolView.rightItemClickBlock = ^{
         NSLog(@"点击了首页分类");
