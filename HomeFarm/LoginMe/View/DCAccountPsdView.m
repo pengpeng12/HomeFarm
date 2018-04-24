@@ -29,6 +29,7 @@
 /* 登录 */
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
+- (IBAction)ForgotPwd:(id)sender;
 
 @end
 
@@ -131,4 +132,7 @@
 
 #pragma mark - Setter Getter Methods
 
+- (IBAction)ForgotPwd:(id)sender {
+    !_fogetpwdBlock ? : _fogetpwdBlock();
+}
 @end

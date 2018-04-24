@@ -37,6 +37,7 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
     self.title = @"填写订单";
+    
 }
 
 

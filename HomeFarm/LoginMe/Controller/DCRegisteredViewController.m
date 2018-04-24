@@ -43,17 +43,11 @@
 - (void)setUpBase
 {
     self.view.backgroundColor = [UIColor whiteColor];
-//    self.title = @"手机注册";
-    //返回按钮
-    UIButton *backButton = [[UIButton alloc]initWithFrame:CGRectMake(20, kStatusBar_Height + 10, 30, 30)];
-    backButton.titleLabel.font = [UIFont systemFontOfSize:18];
-    [backButton setImage:[UIImage imageNamed:@"address4_guanbi"] forState:UIControlStateNormal];
-    [self.view addSubview:backButton];
-    [backButton addTarget:self action:@selector(dissmissClick) forControlEvents:UIControlEventTouchUpInside];
+    self.title = @"注册";
     
     _verificationView = [DCVerificationView dc_viewFromXib];
     [_verificationView.loginButton setTitle:@"注册" forState:0];
-    _verificationView.frame = CGRectMake(0, DCTopNavH + DCMargin, kScreen_Width, 400);
+    _verificationView.frame = CGRectMake(0, DCMargin, kScreen_Width, 400);
 //    @"《用户协议》"
     UIImageView *agreeImage = [[UIImageView alloc]initWithFrame:CGRectMake(_verificationView.loginButton.left, _verificationView.loginButton.bottom + 5, 20, 20)];
     agreeImage.backgroundColor = [UIColor greenColor];
@@ -76,7 +70,7 @@
 - (void)agreementClick
 {
     AgreementViewController *agreeVC = [[AgreementViewController alloc]init];
-    [self presentViewController:agreeVC animated:YES completion:nil];
+    [self.navigationController pushViewController:agreeVC animated:YES];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event

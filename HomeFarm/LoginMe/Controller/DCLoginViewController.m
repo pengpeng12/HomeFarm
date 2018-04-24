@@ -7,7 +7,7 @@
 //
 
 #import "DCLoginViewController.h"
-
+#import "ForgotViewController.h"
 // Controllers
 #import "FHNavigationController.h"
 #import "FHTabBarController.h"
@@ -72,6 +72,7 @@
 #pragma mark - base
 - (void)sertUpBase {
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"登录";
     self.automaticallyAdjustsScrollViewInsets = false;
     
 }
@@ -154,22 +155,32 @@
 
     _verificationView.frame = CGRectMake(kScreen_Width, 0, kScreen_Width, _middleLoginView.height - _titleView.height);
     _accountPsdView.frame = CGRectMake(0, 0, kScreen_Width, _middleLoginView.height - _titleView.height);
+    
+    
+    WEAKSELF
+    _accountPsdView.fogetpwdBlock = ^{
+        [weakSelf.view endEditing:YES];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            ForgotViewController *forgotVC = [ForgotViewController new];
+            [weakSelf.navigationController pushViewController:forgotVC animated:YES];
+        });
+    };
 }
 
 #pragma mark - 注册
 - (IBAction)registAccount {
     
     DCRegisteredViewController *dcRegistVc = [DCRegisteredViewController new];
-    [self presentViewController:dcRegistVc animated:YES completion:nil];
+    [self.navigationController pushViewController:dcRegistVc animated:YES];
 }
 
 #pragma mark - 退出当前界面
-- (IBAction)dismissViewController {
-    
-    [self.view endEditing:YES];
-    [self dismissViewControllerAnimated:YES completion:nil];
-    
-}
+//- (IBAction)dismissViewController {
+//
+//    [self.view endEditing:YES];
+//    [self dismissViewControllerAnimated:YES completion:nil];
+//
+//}
 
 
 -(void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView

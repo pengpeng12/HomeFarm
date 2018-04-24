@@ -10,4 +10,7 @@
 
 @interface DCAccountPsdView : UIView
 
+/** 注册 */
+@property (nonatomic, copy) dispatch_block_t fogetpwdBlock;
+
 @end

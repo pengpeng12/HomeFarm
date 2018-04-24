@@ -383,6 +383,16 @@
 		914EAF25208EB85300301F70 /* IQToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF15208EB85300301F70 /* IQToolbar.m */; };
 		914EAF26208EB85300301F70 /* IQUIView+IQKeyboardToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF17208EB85300301F70 /* IQUIView+IQKeyboardToolbar.m */; };
 		914EAF27208EB85300301F70 /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF19208EB85300301F70 /* IQKeyboardManager.bundle */; };
+		914EAF38208F35D300301F70 /* OrderInformationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF2B208F35D300301F70 /* OrderInformationController.m */; };
+		914EAF39208F35D300301F70 /* orderGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF2E208F35D300301F70 /* orderGroup.m */; };
+		914EAF3A208F35D300301F70 /* orderInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF30208F35D300301F70 /* orderInfoModel.m */; };
+		914EAF3B208F35D300301F70 /* orderFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF33208F35D300301F70 /* orderFooterView.m */; };
+		914EAF3C208F35D300301F70 /* orderHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF35208F35D300301F70 /* orderHeaderView.m */; };
+		914EAF3D208F35D300301F70 /* orderInformationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF37208F35D300301F70 /* orderInformationCell.m */; };
+		914EAF41208F366D00301F70 /* ForgotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF3E208F366D00301F70 /* ForgotViewController.xib */; };
+		914EAF42208F366D00301F70 /* ForgotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF3F208F366D00301F70 /* ForgotViewController.m */; };
+		914EAF46208F37FF00301F70 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF45208F37FF00301F70 /* APRoundedButton.m */; };
+		914EAF49208F3A2200301F70 /* ASTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF47208F3A2100301F70 /* ASTextField.m */; };
 		915C6A362084BE8200AA16F7 /* CommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C6A352084BE8200AA16F7 /* CommodityViewController.m */; };
 		D745360D207B13C000B6C497 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D745360A207B13C000B6C497 /* README.txt */; };
 		D745360E207B13C000B6C497 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D745360C207B13C000B6C497 /* libWeChatSDK.a */; };
@@ -1143,6 +1153,25 @@
 		914EAF16208EB85300301F70 /* IQUIView+IQKeyboardToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IQUIView+IQKeyboardToolbar.h"; sourceTree = "<group>"; };
 		914EAF17208EB85300301F70 /* IQUIView+IQKeyboardToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "IQUIView+IQKeyboardToolbar.m"; sourceTree = "<group>"; };
 		914EAF19208EB85300301F70 /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
+		914EAF2A208F35D300301F70 /* OrderInformationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OrderInformationController.h; sourceTree = "<group>"; };
+		914EAF2B208F35D300301F70 /* OrderInformationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderInformationController.m; sourceTree = "<group>"; };
+		914EAF2D208F35D300301F70 /* orderGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderGroup.h; sourceTree = "<group>"; };
+		914EAF2E208F35D300301F70 /* orderGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderGroup.m; sourceTree = "<group>"; };
+		914EAF2F208F35D300301F70 /* orderInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderInfoModel.h; sourceTree = "<group>"; };
+		914EAF30208F35D300301F70 /* orderInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderInfoModel.m; sourceTree = "<group>"; };
+		914EAF32208F35D300301F70 /* orderFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderFooterView.h; sourceTree = "<group>"; };
+		914EAF33208F35D300301F70 /* orderFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderFooterView.m; sourceTree = "<group>"; };
+		914EAF34208F35D300301F70 /* orderHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderHeaderView.h; sourceTree = "<group>"; };
+		914EAF35208F35D300301F70 /* orderHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderHeaderView.m; sourceTree = "<group>"; };
+		914EAF36208F35D300301F70 /* orderInformationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = orderInformationCell.h; sourceTree = "<group>"; };
+		914EAF37208F35D300301F70 /* orderInformationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = orderInformationCell.m; sourceTree = "<group>"; };
+		914EAF3E208F366D00301F70 /* ForgotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForgotViewController.xib; sourceTree = "<group>"; };
+		914EAF3F208F366D00301F70 /* ForgotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgotViewController.m; sourceTree = "<group>"; };
+		914EAF40208F366D00301F70 /* ForgotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForgotViewController.h; sourceTree = "<group>"; };
+		914EAF44208F37FF00301F70 /* APRoundedButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRoundedButton.h; sourceTree = "<group>"; };
+		914EAF45208F37FF00301F70 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
+		914EAF47208F3A2100301F70 /* ASTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTextField.m; sourceTree = "<group>"; };
+		914EAF48208F3A2200301F70 /* ASTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTextField.h; sourceTree = "<group>"; };
 		915C6A342084BE8200AA16F7 /* CommodityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommodityViewController.h; sourceTree = "<group>"; };
 		915C6A352084BE8200AA16F7 /* CommodityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommodityViewController.m; sourceTree = "<group>"; };
 		D7453608207B13C000B6C497 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1784,6 +1813,9 @@
 		9137B6BC2082036800DD4C33 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				914EAF40208F366D00301F70 /* ForgotViewController.h */,
+				914EAF3F208F366D00301F70 /* ForgotViewController.m */,
+				914EAF3E208F366D00301F70 /* ForgotViewController.xib */,
 				9137B6BD2082036800DD4C33 /* DCLoginViewController.h */,
 				9137B6BE2082036800DD4C33 /* DCLoginViewController.m */,
 				9137B6BF2082036800DD4C33 /* DCLoginViewController.xib */,
@@ -3159,6 +3191,60 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		914EAF28208F35D300301F70 /* orderInformation */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF29208F35D300301F70 /* Controller */,
+				914EAF2C208F35D300301F70 /* Model */,
+				914EAF31208F35D300301F70 /* View */,
+			);
+			path = orderInformation;
+			sourceTree = "<group>";
+		};
+		914EAF29208F35D300301F70 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF2A208F35D300301F70 /* OrderInformationController.h */,
+				914EAF2B208F35D300301F70 /* OrderInformationController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		914EAF2C208F35D300301F70 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF2D208F35D300301F70 /* orderGroup.h */,
+				914EAF2E208F35D300301F70 /* orderGroup.m */,
+				914EAF2F208F35D300301F70 /* orderInfoModel.h */,
+				914EAF30208F35D300301F70 /* orderInfoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		914EAF31208F35D300301F70 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF32208F35D300301F70 /* orderFooterView.h */,
+				914EAF33208F35D300301F70 /* orderFooterView.m */,
+				914EAF34208F35D300301F70 /* orderHeaderView.h */,
+				914EAF35208F35D300301F70 /* orderHeaderView.m */,
+				914EAF36208F35D300301F70 /* orderInformationCell.h */,
+				914EAF37208F35D300301F70 /* orderInformationCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		914EAF43208F37FF00301F70 /* CommonCustomView */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF48208F3A2200301F70 /* ASTextField.h */,
+				914EAF47208F3A2100301F70 /* ASTextField.m */,
+				914EAF44208F37FF00301F70 /* APRoundedButton.h */,
+				914EAF45208F37FF00301F70 /* APRoundedButton.m */,
+			);
+			path = CommonCustomView;
+			sourceTree = "<group>";
+		};
 		D7453607207B13C000B6C497 /* WechatSDK1.8.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3338,6 +3424,7 @@
 		D74540BB207BBDA000B6C497 /* My */ = {
 			isa = PBXGroup;
 			children = (
+				914EAF28208F35D300301F70 /* orderInformation */,
 				9137B65B2082034000DD4C33 /* Main */,
 				9137B6992082034100DD4C33 /* Setting */,
 				D74540BC207BBDA000B6C497 /* Controller */,
@@ -3396,6 +3483,7 @@
 		D74547DC2075BEEE007BE40D /* HomeFarm */ = {
 			isa = PBXGroup;
 			children = (
+				914EAF43208F37FF00301F70 /* CommonCustomView */,
 				914D9D05208D7A6A005A5626 /* GoodsDetails */,
 				9137B8AF20843D2700DD4C33 /* Resource */,
 				9137B7162082107B00DD4C33 /* Expand */,
@@ -3629,6 +3717,7 @@
 				9137B8DD20843D2700DD4C33 /* loading2.gif in Resources */,
 				9137B7DC2082107B00DD4C33 /* navigationbarScanBg.png in Resources */,
 				9137B7F72082107B00DD4C33 /* restrictedshine.tiff in Resources */,
+				914EAF41208F366D00301F70 /* ForgotViewController.xib in Resources */,
 				9137B6B12082034100DD4C33 /* DCCenterBackCell.xib in Resources */,
 				9137B6A72082034100DD4C33 /* DCMyCenterHeaderView.xib in Resources */,
 				9137B8DC20843D2700DD4C33 /* loading.gif in Resources */,
@@ -3695,9 +3784,11 @@
 				914D9DA9208D7A6B005A5626 /* DCSildeBarView.m in Sources */,
 				D74540CC207BBDA000B6C497 /* NSObject+MJKeyValue.m in Sources */,
 				D74540C8207BBDA000B6C497 /* UIViewExt.m in Sources */,
+				914EAF3A208F35D300301F70 /* orderInfoModel.m in Sources */,
 				914D9DC9208D7A6B005A5626 /* DCFeatureChoseTopCell.m in Sources */,
 				D74547E52075BEEE007BE40D /* SignTestViewController.m in Sources */,
 				914D9DB0208D7A6B005A5626 /* DCCommentPicItem.m in Sources */,
+				914EAF3C208F35D300301F70 /* orderHeaderView.m in Sources */,
 				9137B86D2084352500DD4C33 /* TADotView.m in Sources */,
 				9137B6A12082034100DD4C33 /* DCReceivingAddressViewController.m in Sources */,
 				914D9DBA208D7A6B005A5626 /* DCCommentHeaderCell.m in Sources */,
@@ -3730,6 +3821,7 @@
 				9137B7CD2082107B00DD4C33 /* DCObjManager.m in Sources */,
 				9137B84320821BD600DD4C33 /* DCTabBadgeView.m in Sources */,
 				914D9DB5208D7A6B005A5626 /* DCDetailShufflingHeadView.m in Sources */,
+				914EAF38208F35D300301F70 /* OrderInformationController.m in Sources */,
 				9137B71120820E1000DD4C33 /* DCNewWelfareLayout.m in Sources */,
 				9137B6A32082034100DD4C33 /* DCAdressItem.m in Sources */,
 				914EAF21208EB85300301F70 /* IQTextView.m in Sources */,
@@ -3798,6 +3890,7 @@
 				9137B84520821BD600DD4C33 /* DCBaseSetViewController.m in Sources */,
 				9137B6AA2082034100DD4C33 /* DCUserMgHeadView.m in Sources */,
 				9114CAF9207CC0F200A2A26F /* SDWebImageCodersManager.m in Sources */,
+				914EAF3B208F35D300301F70 /* orderFooterView.m in Sources */,
 				914D9DA1208D7A6B005A5626 /* DCItemImageCell.m in Sources */,
 				D7454105207BBDA000B6C497 /* AFSecurityPolicy.m in Sources */,
 				9137B6D52082036900DD4C33 /* DCVerificationView.m in Sources */,
@@ -3812,11 +3905,13 @@
 				914DA083208D8BC700EBF167 /* NSObject+DCNull.m in Sources */,
 				D74540DA207BBDA000B6C497 /* MASLayoutConstraint.m in Sources */,
 				9137B80E2082107B00DD4C33 /* XWFilterAnimator.m in Sources */,
+				914EAF49208F3A2200301F70 /* ASTextField.m in Sources */,
 				9137B8AE20843B9100DD4C33 /* UIBarButtonItem+DCBarButtonItem.m in Sources */,
 				D74540D3207BBDA000B6C497 /* MJPropertyKey.m in Sources */,
 				D74540CD207BBDA000B6C497 /* MJProperty.m in Sources */,
 				9137B81F2082118C00DD4C33 /* SVProgressAnimatedView.m in Sources */,
 				9137B6D32082036900DD4C33 /* DCAccountPsdView.m in Sources */,
+				914EAF39208F35D300301F70 /* orderGroup.m in Sources */,
 				9137B91C2084434C00DD4C33 /* TZAssetModel.m in Sources */,
 				9137B8AB2084395900DD4C33 /* DCHoverFlowLayout.m in Sources */,
 				9137B7C72082107B00DD4C33 /* DCCustionButton.m in Sources */,
@@ -3825,6 +3920,7 @@
 				9114CAF1207CC0F200A2A26F /* NSButton+WebCache.m in Sources */,
 				D7454108207BBDA000B6C497 /* YXHomeViewController.m in Sources */,
 				9137B7D62082107B00DD4C33 /* DCFlashButton.m in Sources */,
+				914EAF3D208F35D300301F70 /* orderInformationCell.m in Sources */,
 				9137B8712084352500DD4C33 /* UIView+SDExtension.m in Sources */,
 				9137B6A42082034100DD4C33 /* DCStateItem.m in Sources */,
 				914D9DB7208D7A6B005A5626 /* DCCommentCell.m in Sources */,
@@ -3942,6 +4038,7 @@
 				914DA08E208D8E4400EBF167 /* SDWaitingView.m in Sources */,
 				9137B9252084434C00DD4C33 /* TZPhotoPreviewController.m in Sources */,
 				914D9DAB208D7A6B005A5626 /* DCParticularsShowViewController.m in Sources */,
+				914EAF42208F366D00301F70 /* ForgotViewController.m in Sources */,
 				9114CB00207CC0F200A2A26F /* SDWebImageManager.m in Sources */,
 				9137B7E62082107B00DD4C33 /* AddressView.m in Sources */,
 				9137B8862084394E00DD4C33 /* DCClassMianItem.m in Sources */,
@@ -3987,6 +4084,7 @@
 				D74547DF2075BEEE007BE40D /* main.m in Sources */,
 				914D9DB3208D7A6B005A5626 /* DCDetailOverFooterView.m in Sources */,
 				9137B7E02082107B00DD4C33 /* CDDTopTip.m in Sources */,
+				914EAF46208F37FF00301F70 /* APRoundedButton.m in Sources */,
 				9114CB3F207CC10800A2A26F /* MJRefreshFooter.m in Sources */,
 				9114CB01207CC0F200A2A26F /* SDWebImagePrefetcher.m in Sources */,
 				9137B91D2084434C00DD4C33 /* TZGifPhotoPreviewController.m in Sources */,

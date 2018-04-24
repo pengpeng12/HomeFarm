@@ -95,12 +95,12 @@
     
     if(viewController == [tabBarController.viewControllers objectAtIndex:4]){
         
-        if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
-            
-            DCLoginViewController *dcLoginVc = [DCLoginViewController new];
-            [self presentViewController:dcLoginVc animated:YES completion:nil];
-            return NO;
-        }
+//        if (![[DCObjManager dc_readUserDataForKey:@"isLogin"] isEqualToString:@"1"]) {
+//
+//            DCLoginViewController *dcLoginVc = [DCLoginViewController new];
+//            [self presentViewController:dcLoginVc animated:YES completion:nil];
+//            return NO;
+//        }
         
     }
     return YES;

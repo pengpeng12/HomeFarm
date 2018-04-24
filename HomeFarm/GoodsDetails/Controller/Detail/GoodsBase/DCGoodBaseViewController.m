@@ -397,7 +397,7 @@ static NSArray *lastSeleArray_;
     if (indexPath.section == 0 && indexPath.row == 0) {
         [self scrollToDetailsPage]; //滚动到详情页面
     }else if (indexPath.section == 2 && indexPath.row == 0) {
-        [self chageUserAdress]; //跟换地址
+        [self chageUserAdress]; //更换地址
     }else if (indexPath.section == 1){ //属性选择
         DCFeatureSelectionViewController *dcFeaVc = [DCFeatureSelectionViewController new];
         dcFeaVc.lastNum = lastNum_;
@@ -469,7 +469,7 @@ static NSArray *lastSeleArray_;
 - (void)scrollToDetailsPage
 {
     dispatch_sync(dispatch_get_global_queue(0, 0), ^{
-        [[NSNotificationCenter defaultCenter]postNotificationName:SCROLLTODETAILSPAGE object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:SCROLLTODETAILSPAGE object:nil];
     });
 }
 

@@ -12,6 +12,7 @@
 #import "MyCenterViewController.h"
 #import "DCSettingViewController.h"
 
+
 // Controllers
 #import "DCReceivingAddressViewController.h" //收货地址
 // Models
@@ -70,10 +71,28 @@ static NSString *const MyCellID = @"myCell";
     NSArray *subTitleArray = @[@"",@"",@"",cacheS,@"",@""];
     self.myItem = [NSArray arrayWithObjects:_titleArray,subTitleArray, nil];
     
+    UIView *headerView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, kScreen_Width, 130)];
+    headerView.backgroundColor = [UIColor whiteColor];
+    UIButton *LoginBtn = [[UIButton alloc]initWithFrame:CGRectMake(kScreen_Width*0.35, 20, kScreen_Width*0.3, 30)];
+    LoginBtn.backgroundColor = [UIColor redColor];
+    LoginBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+    [LoginBtn setTitle:@"登录/注册" forState:UIControlStateNormal];
+    [LoginBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [LoginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
+    [headerView addSubview:LoginBtn];
+    self.tableView.tableHeaderView = headerView;
+    
     self.tableView.tableFooterView = [UIView new]; //去除多余分割线
     
     [self setUpNavTopView];
 }
+
+- (void)loginClick
+{
+    DCLoginViewController *dcLoginVc = [DCLoginViewController new];
+    [self.navigationController pushViewController:dcLoginVc animated:YES];
+}
+
 - (NSString *)CalculateCache
 {
     CGFloat size = [self folderSizeAtPath:NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject] + [self folderSizeAtPath:NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).lastObject] + [self folderSizeAtPath:NSTemporaryDirectory()];
