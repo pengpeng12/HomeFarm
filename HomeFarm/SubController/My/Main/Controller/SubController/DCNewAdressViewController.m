@@ -105,14 +105,15 @@
         _adressHeadView.rePhoneField.text = _adressItem.userPhone;
         _adressHeadView.detailTextView.text = _adressItem.userAdress;
         
-    }else if (_saveType == DCSaveAdressNewType && [DCObjManager dc_readUserDataForKey:@"StoreAddress"] != nil){
-        
-        NSArray *storeAddress = [DCObjManager dc_readUserDataForKey:@"StoreAddress"];
-        _adressHeadView.rePersonField.text = storeAddress[0];
-        _adressHeadView.rePhoneField.text = storeAddress[1];
-        _adressHeadView.addressLabel.text = storeAddress[2];
-        _adressHeadView.detailTextView.text = storeAddress[3];
     }
+//    else if (_saveType == DCSaveAdressNewType && [DCObjManager dc_readUserDataForKey:@"StoreAddress"] != nil){
+//
+//        NSArray *storeAddress = [DCObjManager dc_readUserDataForKey:@"StoreAddress"];
+//        _adressHeadView.rePersonField.text = storeAddress[0];
+//        _adressHeadView.rePhoneField.text = storeAddress[1];
+//        _adressHeadView.addressLabel.text = storeAddress[2];
+//        _adressHeadView.detailTextView.text = storeAddress[3];
+//    }
     
     WEAKSELF
     _adressHeadView.selectAdBlock = ^{
@@ -201,6 +202,7 @@
     adressItem.userPhone = _adressHeadView.rePhoneField.text;
     adressItem.userAdress = _adressHeadView.detailTextView.text;
     adressItem.chooseAdress = _adressHeadView.addressLabel.text;
+    adressItem.areaCode = _chooseLocationView.areaCodeString;
     adressItem.isDefault = @"1"; // 默认不选择
     if (self.defaultBtn.selected == YES) {
         adressItem.isDefault = @"2";
@@ -229,7 +231,7 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD dismiss];
         [weakSelf.view makeToast:@"保存成功" duration:0.5 position:CSToastPositionCenter];
-        [DCObjManager dc_removeUserDataForkey:@"StoreAddress"];
+//        [DCObjManager dc_removeUserDataForkey:@"StoreAddress"];
         
         [[NSNotificationCenter defaultCenter] postNotificationName:@"UpDateUI" object:nil];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.75 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
@@ -260,6 +262,10 @@
     
     if (!_chooseLocationView) {
         _chooseLocationView = [[ChooseLocationView alloc]initWithFrame:CGRectMake(0, kScreen_Height -DCTopNavH - 350, kScreen_Width, 350)];
+        if (_adressItem && _adressItem.areaCode) {
+            _chooseLocationView.areaCode = _adressItem.areaCode;
+        }
+        
         
     }
     return _chooseLocationView;

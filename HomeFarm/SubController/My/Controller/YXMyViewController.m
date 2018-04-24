@@ -22,7 +22,9 @@
 #import "SVProgressHUD.h"
 
 @interface YXMyViewController ()<UITableViewDelegate,UITableViewDataSource>
-
+{
+    NSArray *_titleArray;
+}
 /* 顶部Nva */
 @property (strong , nonatomic)MyCenterTopToolView *topToolView;
 
@@ -58,17 +60,28 @@ static NSString *const MyCellID = @"myCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 //    self.view.backgroundColor = DCBGColor;
+    NSString *cacheS = [self CalculateCache];
+    
     self.view.backgroundColor = [UIColor whiteColor];
     self.tableView.backgroundColor = self.view.backgroundColor;
     self.title = @"我的";
     self.automaticallyAdjustsScrollViewInsets = NO;
-    NSArray *titleArray = @[@"个人中心",@"地址管理",@"我的订单",@"清除缓存",@"关于我们",@"意见反馈"];
-    NSArray *subTitleArray = @[@"",@"",@"",@"1.7M",@"",@""];
-    self.myItem = [NSArray arrayWithObjects:titleArray,subTitleArray, nil];
+    _titleArray = @[@"个人中心",@"地址管理",@"我的订单",@"清除缓存",@"关于我们",@"意见反馈"];
+    NSArray *subTitleArray = @[@"",@"",@"",cacheS,@"",@""];
+    self.myItem = [NSArray arrayWithObjects:_titleArray,subTitleArray, nil];
     
     self.tableView.tableFooterView = [UIView new]; //去除多余分割线
     
     [self setUpNavTopView];
+}
+- (NSString *)CalculateCache
+{
+    CGFloat size = [self folderSizeAtPath:NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).lastObject] + [self folderSizeAtPath:NSSearchPathForDirectoriesInDomains(NSLibraryDirectory, NSUserDomainMask, YES).lastObject] + [self folderSizeAtPath:NSTemporaryDirectory()];
+//    CGFloat size = [self folderSizeAtPath:NSTemporaryDirectory()];
+    
+    NSString *cacheSize = size > 1 ? [NSString stringWithFormat:@"%.2fM", size] : [NSString stringWithFormat:@"%.2fK", size * 1024.0];
+    
+    return cacheSize;
 }
 #pragma mark - 导航栏处理
 - (void)setUpNavTopView
@@ -118,12 +131,72 @@ static NSString *const MyCellID = @"myCell";
         
     }else if (indexPath.row == 3){
         //清除缓存
+        NSString *message = @"确定清除缓存?";
+        
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:nil message:message preferredStyle:(UIAlertControllerStyleAlert)];
+        
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"确定" style:(UIAlertActionStyleDefault) handler:^(UIAlertAction *action) {
+            [self cleanCaches];
+        }];
+        
+        UIAlertAction *cancel = [UIAlertAction actionWithTitle:@"取消" style:(UIAlertActionStyleCancel) handler:nil];
+        [alert addAction:action];
+        [alert addAction:cancel];
+        [self showDetailViewController:alert sender:nil];
+        
     }else if (indexPath.row == 4){
         //关于我们
     }else if (indexPath.row == 5){
         //意见反馈
        
     }
+    
+}
+
+
+// 计算目录大小
+- (CGFloat)folderSizeAtPath:(NSString *)path{
+    // 利用NSFileManager实现对文件的管理
+    NSFileManager *manager = [NSFileManager defaultManager];
+    CGFloat size = 0;
+    if ([manager fileExistsAtPath:path]) {
+        // 获取该目录下的文件，计算其大小
+        NSArray *childrenFile = [manager subpathsAtPath:path];
+        for (NSString *fileName in childrenFile) {
+            NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
+            size += [manager attributesOfItemAtPath:absolutePath error:nil].fileSize;
+        }
+        // 将大小转化为M
+        return size / 1024.0 / 1024.0;
+    }
+    return 0;
+}
+
+// 根据路径删除文件
+- (void)cleanCaches{
+    [SVProgressHUD show];
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeBlack];
+    NSArray *pathArray = @[NSTemporaryDirectory()];
+    // 利用NSFileManager实现对文件的管理
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    for (NSString *path in pathArray) {
+        if ([fileManager fileExistsAtPath:path]) {
+            // 获取该路径下面的文件名
+            NSArray *childrenFiles = [fileManager subpathsAtPath:path];
+            for (NSString *fileName in childrenFiles) {
+                // 拼接路径
+                NSString *absolutePath = [path stringByAppendingPathComponent:fileName];
+                // 将文件删除
+                [fileManager removeItemAtPath:absolutePath error:nil];
+            }
+        }
+    }
+    
+    [SVProgressHUD dismiss];
+    [self.view makeToast:@"清除成功" duration:0.5 position:CSToastPositionCenter];
+    NSArray *subTitleArray = @[@"",@"",@"",@"0K",@"",@""];
+    self.myItem = [NSArray arrayWithObjects:_titleArray,subTitleArray, nil];
+    [self.tableView reloadData];
     
 }
 

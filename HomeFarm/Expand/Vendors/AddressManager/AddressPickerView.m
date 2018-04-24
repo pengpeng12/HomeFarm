@@ -72,6 +72,16 @@ static const CGFloat kTopViewHeight=40;
 
 - (void)createData
 {
+//    NSString *str = [[NSBundle mainBundle]pathForResource:@"Cities.json"ofType:nil];
+//
+//    NSData *dataTest = [NSData dataWithContentsOfFile:str];
+//
+//    NSArray *array = [NSJSONSerialization JSONObjectWithData:dataTest options:0 error:NULL];
+//    if( [array isKindOfClass:[NSArray class]])
+//    {
+//        [array writeToFile:@"/Users/yixin/Desktop/City_Area.plist"atomically:YES];
+//    }
+    
     NSString *plistPath = [[NSBundle mainBundle] pathForResource:@"addressData" ofType:@"plist"];
     NSArray *data = [[NSArray alloc]initWithContentsOfFile:plistPath];
     

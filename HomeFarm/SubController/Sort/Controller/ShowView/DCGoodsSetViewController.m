@@ -7,6 +7,7 @@
 //
 
 #import "DCGoodsSetViewController.h"
+#import "DCGoodDetailViewController.h"
 
 // Controllers
 #import "DCFootprintGoodsViewController.h"
@@ -254,23 +255,22 @@ static NSString *const DCListGridCellID = @"DCListGridCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     NSLog(@"点击了商品第%zd",indexPath.row);
-    
-    
-//    DCGoodDetailViewController *dcVc = [[DCGoodDetailViewController alloc] init];
-//    dcVc.goodTitle = _setItem[indexPath.row].main_title;
-//    dcVc.goodPrice = _setItem[indexPath.row].price;
-//    dcVc.goodSubtitle = _setItem[indexPath.row].goods_title;
-//    dcVc.shufflingArray = _setItem[indexPath.row].images;
-//    dcVc.goodImageView = _setItem[indexPath.row].image_url;
-//
-//    [self.navigationController pushViewController:dcVc animated:YES];
-//
-//    WEAKSELF
-//    [UIView animateWithDuration:0.3 animations:^{
-//        weakSelf.colonView.left =kScreen_Width;
-//    }completion:^(BOOL finished) {
-//        [weakSelf.colonView removeFromSuperview];
-//    }];
+
+    DCGoodDetailViewController *dcVc = [[DCGoodDetailViewController alloc] init];
+    dcVc.goodTitle = _setItem[indexPath.row].main_title;
+    dcVc.goodPrice = _setItem[indexPath.row].price;
+    dcVc.goodSubtitle = _setItem[indexPath.row].goods_title;
+    dcVc.shufflingArray = _setItem[indexPath.row].images;
+    dcVc.goodImageView = _setItem[indexPath.row].image_url;
+
+    [self.navigationController pushViewController:dcVc animated:YES];
+
+    WEAKSELF
+    [UIView animateWithDuration:0.3 animations:^{
+        weakSelf.colonView.left =kScreen_Width;
+    }completion:^(BOOL finished) {
+        [weakSelf.colonView removeFromSuperview];
+    }];
 }
 
 

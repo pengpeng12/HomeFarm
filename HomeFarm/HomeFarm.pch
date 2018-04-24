@@ -74,6 +74,7 @@
 #define PFR8Font [UIFont fontWithName:PFR size:8];
 
 #import "UIViewExt.h"
+#import "UIView+Toast.h"
 #import "SDWebImageManager.h"
 #import "FLAnimatedImage.h"
 #import "SDCycleScrollView.h"
@@ -103,6 +104,10 @@
 #define AlertViewShow(msg,btnTitle,cancelTitle)\
 UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg delegate:self cancelButtonTitle:btnTitle otherButtonTitles:cancelTitle,nil];\
 [alert show];
+
+#define APPDELEGATE ((AppDelegate *)[UIApplication sharedApplication].delegate)
+
+#define KEYWINDOW  [UIApplication sharedApplication].keyWindow
 
 #define UserInfoData [DCUserInfo findAll].lastObject
 

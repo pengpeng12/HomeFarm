@@ -7,6 +7,7 @@
 //
 
 #import "DCHandPickViewController.h"
+#import "DCGMScanViewController.h"
 
 // Controllers
 #import "FHNavigationController.h"
@@ -14,8 +15,8 @@
 #import "CommodityViewController.h"
 #import "DCMyTrolleyViewController.h"
 
-//商品详情（用web页展示）
-//#import "DCGoodDetailViewController.h"
+//商品详情（可能会用web页展示，先写成本地原生实现）
+#import "DCGoodDetailViewController.h"
 
 // Models
 #import "DCGridItem.h"
@@ -195,8 +196,8 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     WEAKSELF
     _topToolView.leftItemClickBlock = ^{
         NSLog(@"点击了首页扫一扫");
-//        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
-//        [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
+        DCGMScanViewController *dcGMvC = [DCGMScanViewController new];
+        [weakSelf.navigationController pushViewController:dcGMvC animated:YES];
     };
     _topToolView.rightItemClickBlock = ^{
         NSLog(@"点击了首页分类");
@@ -405,13 +406,13 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     }else if (indexPath.section == 5){
         NSLog(@"点击了推荐的第%zd个商品",indexPath.row);
         
-//        DCGoodDetailViewController *dcVc = [[DCGoodDetailViewController alloc] init];
-//        dcVc.goodTitle = _youLikeItem[indexPath.row].main_title;
-//        dcVc.goodPrice = _youLikeItem[indexPath.row].price;
-//        dcVc.goodSubtitle = _youLikeItem[indexPath.row].goods_title;
-//        dcVc.shufflingArray = _youLikeItem[indexPath.row].images;
-//        dcVc.goodImageView = _youLikeItem[indexPath.row].image_url;
-//
+        DCGoodDetailViewController *dcVc = [[DCGoodDetailViewController alloc] init];
+        dcVc.goodTitle = _youLikeItem[indexPath.row].main_title;
+        dcVc.goodPrice = _youLikeItem[indexPath.row].price;
+        dcVc.goodSubtitle = _youLikeItem[indexPath.row].goods_title;
+        dcVc.shufflingArray = _youLikeItem[indexPath.row].images;
+        dcVc.goodImageView = _youLikeItem[indexPath.row].image_url;
+        [self.navigationController pushViewController:dcVc animated:YES];
         
     }
 }

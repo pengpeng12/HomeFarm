@@ -18,6 +18,8 @@
 @property (nonatomic, copy) NSString *userPhone;
 /* 选择地址地址 */
 @property (nonatomic, copy) NSString *chooseAdress;
+//第三级（市）的code
+@property (nonatomic, copy) NSString *areaCode;
 /* 用户地址 */
 @property (nonatomic, copy) NSString *userAdress;
 

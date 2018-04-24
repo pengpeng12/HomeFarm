@@ -167,7 +167,7 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
         //1.1 判断是否是第一次选择,不是,则重新选择省,切换省.
         NSIndexPath * indexPath0 = [tableView indexPathForSelectedRow];
 
-        if ([indexPath0 compare:indexPath] != NSOrderedSame && indexPath0) {
+        if (indexPath0) {
             
             for (int i = 0; i < self.tableViews.count && self.tableViews.count != 1; i++) {
                 [self removeLastItem];
@@ -177,15 +177,6 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
             [self scrollToNextItem:provinceItem.name];
             return indexPath;
             
-        }else if ([indexPath0 compare:indexPath] == NSOrderedSame && indexPath0){
-            
-            for (int i = 0; i < self.tableViews.count && self.tableViews.count != 1 ; i++) {
-                [self removeLastItem];
-            }
-            [self addTopBarItem];
-            [self addTableView];
-            [self scrollToNextItem:provinceItem.name];
-            return indexPath;
         }
 
         //之前未选中省，第一次选择省
@@ -239,6 +230,8 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
        item = self.cityDataSouce[indexPath.row];
     }else if ([self.tableViews indexOfObject:tableView] == 2){
        item = self.districtDataSouce[indexPath.row];
+       //区的code
+       self.areaCodeString = item.code;
     }
     item.isSelected = YES;
     [tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -296,14 +289,15 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
     [self changeUnderLineFrame:btn];
     NSMutableString * addressStr = [[NSMutableString alloc] init];
     for (UIButton * btn  in self.topTabbarItems) {
-        if ([btn.currentTitle isEqualToString:@"县"] || [btn.currentTitle isEqualToString:@"市辖区"] ) {
-            continue;
-        }
+        //可以在这里消除北京北京的重复（如果有需求）
         [addressStr appendString:btn.currentTitle];
         [addressStr appendString:@" "];
     }
     self.address = addressStr;
-    
+    //第三级地区
+    if (index == 2) {
+        
+    }
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         self.hidden = YES;
         if (self.chooseFinish) {
@@ -401,6 +395,7 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
             UITableView * tableView  = self.tableViews.firstObject;
             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
             [self tableView:tableView didSelectRowAtIndexPath:indexPath];
+            [self setUpAddress:item.name];
             break;
         }
     }
@@ -413,6 +408,7 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
             UITableView * tableView  = self.tableViews[1];
             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
             [self tableView:tableView didSelectRowAtIndexPath:indexPath];
+            [self setUpAddress:item.name];
             break;
         }
     }
@@ -424,6 +420,7 @@ static  CGFloat  const  kHYTopTabbarHeight = 30; //地址标签栏的高度
             UITableView * tableView  = self.tableViews[2];
             [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionMiddle];
             [self tableView:tableView didSelectRowAtIndexPath:indexPath];
+            [self setUpAddress:item.name];
             break;
         }
     }

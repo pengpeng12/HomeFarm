@@ -91,7 +91,7 @@ static DCAdressDateBase *_DBCtl = nil;
     [_db open];
     
     // 初始化数据表
-    NSString *personSql = @"CREATE TABLE 'adress' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'adress_id' VARCHAR(255),'userName' VARCHAR(255),'userPhone' VARCHAR(255),'chooseAdress' VARCHAR(255),'userAdress' VARCHAR(255),'isDefault' VARCHAR(255))";
+    NSString *personSql = @"CREATE TABLE 'adress' ('id' INTEGER PRIMARY KEY AUTOINCREMENT  NOT NULL ,'adress_id' VARCHAR(255),'userName' VARCHAR(255),'userPhone' VARCHAR(255),'chooseAdress' VARCHAR(255),'userAdress' VARCHAR(255),'isDefault' VARCHAR(255),'areaCode' VARCHAR(255))";
     
     [_db executeUpdate:personSql];
     
@@ -118,7 +118,7 @@ static DCAdressDateBase *_DBCtl = nil;
     }
     maxID = @([maxID integerValue] + 1);
     
-    [_db executeUpdate:@"INSERT INTO adress(adress_id,userName,userPhone,chooseAdress,userAdress,isDefault)VALUES(?,?,?,?,?,?)",maxID,adress.userName,adress.userPhone,adress.chooseAdress,adress.userAdress,adress.isDefault];
+    [_db executeUpdate:@"INSERT INTO adress(adress_id,userName,userPhone,chooseAdress,userAdress,isDefault,areaCode)VALUES(?,?,?,?,?,?,?)",maxID,adress.userName,adress.userPhone,adress.chooseAdress,adress.userAdress,adress.isDefault,adress.areaCode];
     
     
     [_db close];
@@ -144,6 +144,7 @@ static DCAdressDateBase *_DBCtl = nil;
     [_db executeUpdate:@"UPDATE 'adress' SET chooseAdress = ? WHERE adress_id = ? ",adress.chooseAdress,adress.ID];
     [_db executeUpdate:@"UPDATE 'adress' SET userAdress = ? WHERE adress_id = ? ",adress.userAdress,adress.ID];
     [_db executeUpdate:@"UPDATE 'adress' SET isDefault = ?  WHERE adress_id = ? ",adress.isDefault,adress.ID];
+    [_db executeUpdate:@"UPDATE 'adress' SET areaCode = ?  WHERE adress_id = ? ",adress.areaCode,adress.ID];
 
     [_db close];
 }
@@ -165,6 +166,7 @@ static DCAdressDateBase *_DBCtl = nil;
         adressItem.chooseAdress = [res stringForColumn:@"chooseAdress"];
         adressItem.userAdress = [res stringForColumn:@"userAdress"];
         adressItem.isDefault = [res stringForColumn:@"isDefault"];
+        adressItem.areaCode = [res stringForColumn:@"areaCode"];
         [dataArray addObject:adressItem];
     }
     

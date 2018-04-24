@@ -126,7 +126,7 @@
 
 -(void)addObserverReachabilityChanged:(void(^)(NetworkStatus netStatus)) netStatusBlock{
 
-    Reachability *_internetReach = [Reachability reachabilityWithHostname:@"www.baidu.com"];
+    Reachability *_internetReach = [Reachability reachabilityWithHostname:@"http://www.baidu.com"];
     [_internetReach startNotifier];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector: @selector(reachabilityChangedNet:) name: kReachabilityChangedNotification object: nil];
