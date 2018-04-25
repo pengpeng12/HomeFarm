@@ -54,7 +54,7 @@
     
     _sloganLabel = [[UILabel alloc] init];
     _sloganLabel.textColor = [UIColor darkGrayColor];
-    _sloganLabel.text = @"此处非常冷清。。。。";
+    _sloganLabel.text = @"您还没有添加物品";
     _sloganLabel.font = PFR12Font;
     _sloganLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_sloganLabel];
@@ -62,17 +62,17 @@
     _adLabel = [[UILabel alloc] init];
     _adLabel.textColor = [UIColor orangeColor];
     _adLabel.font = PFR14Font;
-    _adLabel.text = @"DC超市 酒水茗茶，全城畅想 →";
+    _adLabel.text = @"";
     _adLabel.textAlignment = NSTextAlignmentCenter;
     [self addSubview:_adLabel];
     
-    _buyingButton = [UIButton buttonWithType:UIButtonTypeCustom];
-    _buyingButton.titleLabel.font = PFR14Font;
-    [_buyingButton setTitle:@"立即抢购" forState:UIControlStateNormal];
-    [_buyingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    _buyingButton.backgroundColor = [UIColor whiteColor];
-    [_buyingButton addTarget:self action:@selector(buyingButtonClick) forControlEvents:UIControlEventTouchUpInside];
-    [self addSubview:_buyingButton];
+//    _buyingButton = [UIButton buttonWithType:UIButtonTypeCustom];
+//    _buyingButton.titleLabel.font = PFR14Font;
+//    [_buyingButton setTitle:@"立即抢购" forState:UIControlStateNormal];
+//    [_buyingButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+//    _buyingButton.backgroundColor = [UIColor whiteColor];
+//    [_buyingButton addTarget:self action:@selector(buyingButtonClick) forControlEvents:UIControlEventTouchUpInside];
+//    [self addSubview:_buyingButton];
 }
 
 - (void)layoutSubviews

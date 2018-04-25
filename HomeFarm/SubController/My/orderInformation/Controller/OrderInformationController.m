@@ -65,7 +65,7 @@
     }
     //添加红色选中条
     _redArticle = [[UIImageView alloc]initWithFrame:CGRectMake(0 , segButtonH-3, segButtonW, 3)];
-    //_redArticle.backgroundColor = XLColor(221, 41, 97);
+    //_redArticle.backgroundColor = RGB(221, 41, 97);
     _redArticle.backgroundColor = [UIColor redColor];
     [self.view addSubview:_redArticle];
     

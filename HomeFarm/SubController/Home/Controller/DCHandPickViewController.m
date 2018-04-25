@@ -14,6 +14,8 @@
 #import "DCGoodsSetViewController.h"
 #import "CommodityViewController.h"
 #import "DCMyTrolleyViewController.h"
+//购物车
+#import "XShopViewController.h"
 
 //商品详情（可能会用web页展示，先写成本地原生实现）
 #import "DCGoodDetailViewController.h"
@@ -206,9 +208,10 @@ static NSString *const DCScrollAdFootViewID = @"DCScrollAdFootView";
     };
     _topToolView.rightRItemClickBlock = ^{
         NSLog(@"点击了首页购物车");
-        DCMyTrolleyViewController *shopCarVc = [DCMyTrolleyViewController new];
-        shopCarVc.isTabBar = YES;
-        shopCarVc.title = @"购物车";
+//        DCMyTrolleyViewController *shopCarVc = [DCMyTrolleyViewController new];
+//        shopCarVc.isTabBar = NO;
+//        shopCarVc.title = @"购物车";
+        XShopViewController *shopCarVc = [XShopViewController new];
         [weakSelf.navigationController pushViewController:shopCarVc animated:YES];
     };
     _topToolView.searchButtonClickBlock = ^{

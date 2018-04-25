@@ -15,7 +15,9 @@
 #import "DCFeatureSelectionViewController.h"
 #import "DCFillinOrderViewController.h"
 #import "DCLoginViewController.h"
+
 // Models
+
 
 // Views
 #import "DCLIRLButton.h"
@@ -41,7 +43,10 @@
 // Others
 
 @interface DCGoodBaseViewController ()<UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,WKNavigationDelegate>
-
+{
+    //商品个数 初始默认是1
+    int _numAll;
+}
 @property (strong, nonatomic) UIScrollView *scrollerView;
 @property (strong, nonatomic) UICollectionView *collectionView;
 @property (strong, nonatomic) WKWebView *webView;
@@ -142,6 +147,8 @@ static NSArray *lastSeleArray_;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    _numAll = 1;
+    
     [self setUpInit];
     
     [self setUpViewScroller];
@@ -184,20 +191,63 @@ static NSArray *lastSeleArray_;
 
     //父类加入购物车，立即购买通知
     _dcObj = [[NSNotificationCenter defaultCenter]addObserverForName:SELECTCARTORBUY object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification * _Nonnull note) {
-        
+        __strong typeof(weakSelf) strongSelf = weakSelf;
         if (lastSeleArray_.count != 0) {
             if ([note.userInfo[@"buttonTag"] isEqualToString:@"2"]) { //加入购物车（父类）
+//                dcVc.goodTitle = _setItem[indexPath.row].main_title;
+//                dcVc.goodPrice = _setItem[indexPath.row].price;
+//                dcVc.goodSubtitle = _setItem[indexPath.row].goods_title;
+//                dcVc.shufflingArray = _setItem[indexPath.row].images;
+//                dcVc.goodImageView = _setItem[indexPath.row].image_url;
+                NSMutableArray *numIsExis = [NSMutableArray arrayWithContentsOfFile:[CommonMethod getFilePath]];
+                NSString *num = @"1";
+                long numValue = [numIsExis count];//numAll;
+                if (numValue) {
+                    for (int i=0; i<numIsExis.count; i++) {
+                        NSMutableDictionary *dic = [numIsExis objectAtIndex:i];
+                        
+                        
+                        if ([strongSelf.goodImageView isEqualToString:[dic objectForKey:@"imageUrl"]]) {
+                            
+                            numValue = [[dic objectForKey:@"num"] intValue];
+                            numValue += _numAll;
+                            
+                            [dic setObject:[NSString stringWithFormat:@"%ld",numValue] forKey:@"num"];
+                            
+                            [numIsExis writeToFile:[CommonMethod getFilePath] atomically:YES];
+                        }
+                        
+                    }
+                    
+                    num = [NSString stringWithFormat:@"%ld",numValue];
+                }
                 
-                [weakSelf setUpWithAddSuccess];
+                [strongSelf writeConfigFile:self.goodImageView descirb:self.goodSubtitle price:self.goodPrice num:num selected:@"0" isSale:@"1" code:self.goodTitle];
+                [strongSelf setUpWithAddSuccess];
                 
             }else if ([note.userInfo[@"buttonTag"] isEqualToString:@"3"]){//立即购买（父类）
                 
-                DCFillinOrderViewController *dcFillVc = [DCFillinOrderViewController new];
-                [weakSelf.navigationController pushViewController:dcFillVc animated:YES];
+
+                XOrderPayViewController *order = [[XOrderPayViewController alloc] init];
+                NSMutableDictionary *tempDic = [[NSMutableDictionary alloc] initWithCapacity:0];
+                [tempDic setObject:strongSelf.goodImageView forKey:@"imageUrl"];
+                [tempDic setObject:strongSelf.goodSubtitle forKey:@"descirb"];
+                [tempDic setObject:strongSelf.goodPrice forKey:@"price"];
+                [tempDic setObject:[NSString stringWithFormat:@"%d",_numAll] forKey:@"num"];
+                [tempDic setObject:@"1" forKey:@"selected"];
+                [tempDic setObject:@"1" forKey:@"isSale"];
+                [tempDic setObject:strongSelf.goodTitle forKey:@"code"];
+                
+                order.tempPlistArr = [[NSMutableArray alloc] initWithCapacity:0];
+                [order.tempPlistArr addObject:tempDic];
+                order.immdetilyBtnStr = @"临时结算物品";
+                
+                [strongSelf.navigationController pushViewController:order animated:YES];
+                
             }
             
         }else {
-            
+            //选择属性
             DCFeatureSelectionViewController *dcNewFeaVc = [DCFeatureSelectionViewController new];
             dcNewFeaVc.goodImageView = weakSelf.goodImageView;
             [weakSelf setUpAlterViewControllerWith:dcNewFeaVc WithDistance:kScreen_Height * 0.8 WithDirection:XWDrawerAnimatorDirectionBottom WithParallaxEnable:YES WithFlipEnable:YES];
@@ -218,15 +268,99 @@ static NSArray *lastSeleArray_;
         
         if ([buttonTag isEqualToString:@"0"]) { //加入购物车
             
+            NSMutableArray *numIsExis = [NSMutableArray arrayWithContentsOfFile:[CommonMethod getFilePath]];
+            NSString *num = @"1";
+            long numValue = [numIsExis count];//numAll;
+            if (numValue) {
+                for (int i=0; i<numIsExis.count; i++) {
+                    NSMutableDictionary *dic = [numIsExis objectAtIndex:i];
+                    
+                    
+                    if ([self.goodImageView isEqualToString:[dic objectForKey:@"imageUrl"]]) {
+                        
+                        numValue = [[dic objectForKey:@"num"] intValue];
+                        numValue += _numAll;
+                        
+                        [dic setObject:[NSString stringWithFormat:@"%ld",numValue] forKey:@"num"];
+                        
+                        [numIsExis writeToFile:[CommonMethod getFilePath] atomically:YES];
+                    }
+                    
+                }
+                
+                num = [NSString stringWithFormat:@"%ld",numValue];
+            }
+            
+            [self writeConfigFile:self.goodImageView descirb:self.goodSubtitle price:self.goodPrice num:num selected:@"0" isSale:@"1" code:self.goodTitle];
             [weakSelf setUpWithAddSuccess];
             
         }else if ([buttonTag isEqualToString:@"1"]) { //立即购买
             
-            DCFillinOrderViewController *dcFillVc = [DCFillinOrderViewController new];
-            [weakSelf.navigationController pushViewController:dcFillVc animated:YES];
+            XOrderPayViewController *order = [[XOrderPayViewController alloc] init];
+            NSMutableDictionary *tempDic = [[NSMutableDictionary alloc] initWithCapacity:0];
+            [tempDic setObject:self.goodImageView forKey:@"imageUrl"];
+            [tempDic setObject:self.goodSubtitle forKey:@"descirb"];
+            [tempDic setObject:self.goodPrice forKey:@"price"];
+            [tempDic setObject:[NSString stringWithFormat:@"%d",_numAll] forKey:@"num"];
+            [tempDic setObject:@"1" forKey:@"selected"];
+            [tempDic setObject:@"1" forKey:@"isSale"];
+            [tempDic setObject:self.goodTitle forKey:@"code"];
+            
+            order.tempPlistArr = [[NSMutableArray alloc] initWithCapacity:0];
+            [order.tempPlistArr addObject:tempDic];
+            order.immdetilyBtnStr = @"临时结算物品";
+            
+            [self.navigationController pushViewController:order animated:YES];
         }
         
     }];
+}
+
+-(void)writeConfigFile:(NSString *)imageUrl descirb:(NSString *)descirb price:(NSString *)price num:(NSString *)num selected:(NSString *)selected isSale:(NSString *)isSale code:(NSString *)code{
+    
+    if (![[NSFileManager defaultManager] fileExistsAtPath:[CommonMethod getFilePath]]) {//如果文件不存在则创建
+        NSFileManager* fm = [NSFileManager defaultManager];
+        
+        [fm createFileAtPath:[CommonMethod getFilePath] contents:nil attributes:nil];
+    }
+    
+    //selected 1：表示还未选中
+    //isSale   1:出售中（根据库存数做判断）
+    NSMutableDictionary* dic = [NSMutableDictionary dictionaryWithObjectsAndKeys:imageUrl,@"imageUrl",descirb,@"descirb",price,@"price",num,@"num",selected,@"selected",isSale,@"isSale",code,@"code",nil];
+    
+    NSMutableArray *addObj = [[NSMutableArray alloc] initWithContentsOfFile:[CommonMethod getFilePath]];
+    
+    if (addObj == nil) {
+        addObj = [[NSMutableArray alloc] initWithCapacity:0];
+        [addObj addObject:dic];
+        [addObj writeToFile:[CommonMethod getFilePath] atomically:YES];
+    }else{
+        
+        BOOL exis = NO;
+        int witchDic = 0;
+        for (int i=0; i<addObj.count; i++) {
+            NSMutableDictionary *dics = [addObj objectAtIndex:i];
+            
+            
+            if ([self.shopItemData.mainImgUrl isEqualToString:[dics objectForKey:@"imageUrl"]]) {
+                
+                exis = YES;
+                witchDic = i;
+                
+            }
+        }
+        
+        if (exis == YES) {
+            [[addObj objectAtIndex:witchDic] setObject:[NSString stringWithFormat:@"%@",num] forKey:@"num"];
+            
+            [addObj writeToFile:[CommonMethod getFilePath] atomically:YES];
+        }else{
+            [addObj addObject:dic];
+            
+            [addObj writeToFile:[CommonMethod getFilePath] atomically:YES];
+        }
+    }
+    
 }
 
 #pragma mark - 悬浮按钮

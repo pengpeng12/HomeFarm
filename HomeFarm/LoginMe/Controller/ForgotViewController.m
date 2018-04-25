@@ -200,7 +200,7 @@
         //========================Yidashi register 20150320 inserted by unje
         NSString *params = [NSString stringWithFormat:@"{\"phone\":\"%@\",\"pwd\":\"%@\",\"valiNumber\":\"%@\"}",_phonenumberTextField.text,_passwordTextField.text,_activatekeyTextField.text];
         
-//        [DataRequestManager methodPostBody:[NSString stringWithFormat:@"%@yds/retrieve",YDSRequestUrl] params:params HUDView:self HUDText:@"" success:^(id JSON){
+//        [DataRequestManager methodPostBody:[NSString stringWithFormat:@"%@yds/retrieve",YXRequestUrl] params:params HUDView:self HUDText:@"" success:^(id JSON){
 //            NSLog(@"---login----%@",JSON);
 //
 //            if([[JSON valueForKey:@"statusCode"] intValue] == 200){

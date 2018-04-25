@@ -74,6 +74,9 @@
 #define PFR8Font [UIFont fontWithName:PFR size:8];
 
 #import "UIViewExt.h"
+#import "CommonMethod.h"
+#import "DataRequestManager.h"
+#import "FanweMessage.h"
 #import "UIView+Toast.h"
 #import "SDWebImageManager.h"
 #import "FLAnimatedImage.h"
@@ -129,6 +132,8 @@ UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"提示" message:msg del
 #define BeastBeautyShopArray @[@"http://gfs7.gomein.net.cn/T1xp_sB7KT1RCvBVdK.jpg",@"http://gfs5.gomein.net.cn/T1Ao_sB7VT1RCvBVdK.jpg",@"http://gfs5.gomein.net.cn/T12md_B7YT1RCvBVdK.jpg"]
 
 #define HomeBottomViewGIFImage @"http://gfs8.gomein.net.cn/T1RbW_BmdT1RCvBVdK.gif"
+
+#define YXRequestUrl @"http://www.exinol.com/"
 
 //获取当前版本号
 #define BUNDLE_VERSION [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]

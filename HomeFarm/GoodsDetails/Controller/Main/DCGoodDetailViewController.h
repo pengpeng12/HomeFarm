@@ -22,4 +22,6 @@
 /* 商品轮播图 */
 @property (copy , nonatomic)NSArray *shufflingArray;
 
+
+
 @end

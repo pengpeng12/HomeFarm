@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+#import "XOrderPayViewController.h"
+#import "ShopItem.h"
+
 @interface DCGoodBaseViewController : UIViewController
 
 /** 更改标题 */
@@ -24,5 +27,7 @@
 
 /* 商品轮播图 */
 @property (copy , nonatomic)NSArray *shufflingArray;
+
+@property(nonatomic, weak)ShopItem *shopItemData;
 
 @end

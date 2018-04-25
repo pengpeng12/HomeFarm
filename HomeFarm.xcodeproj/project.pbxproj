@@ -393,6 +393,51 @@
 		914EAF42208F366D00301F70 /* ForgotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF3F208F366D00301F70 /* ForgotViewController.m */; };
 		914EAF46208F37FF00301F70 /* APRoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF45208F37FF00301F70 /* APRoundedButton.m */; };
 		914EAF49208F3A2200301F70 /* ASTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF47208F3A2100301F70 /* ASTextField.m */; };
+		914EAF69209011B000301F70 /* basket@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF4C209011B000301F70 /* basket@2x.png */; };
+		914EAF6A209011B000301F70 /* basket@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF4D209011B000301F70 /* basket@3x.png */; };
+		914EAF6B209011B000301F70 /* shop_alipay_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF4E209011B000301F70 /* shop_alipay_icon.png */; };
+		914EAF6C209011B000301F70 /* shop_alipay_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF4F209011B000301F70 /* shop_alipay_icon@2x.png */; };
+		914EAF6D209011B000301F70 /* shop_area_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF50209011B000301F70 /* shop_area_icon@2x.png */; };
+		914EAF6E209011B000301F70 /* shop_area_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF51209011B000301F70 /* shop_area_icon@3x.png */; };
+		914EAF6F209011B000301F70 /* shop_delete_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF52209011B000301F70 /* shop_delete_icon@2x.png */; };
+		914EAF70209011B000301F70 /* shop_delete_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF53209011B000301F70 /* shop_delete_icon@3x.png */; };
+		914EAF71209011B000301F70 /* shop_edit_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF54209011B000301F70 /* shop_edit_icon@2x.png */; };
+		914EAF72209011B000301F70 /* shop_edit_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF55209011B000301F70 /* shop_edit_icon@3x.png */; };
+		914EAF73209011B000301F70 /* shop_unfurled_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF56209011B000301F70 /* shop_unfurled_icon@2x.png */; };
+		914EAF74209011B000301F70 /* shop_unfurled_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF57209011B000301F70 /* shop_unfurled_icon@3x.png */; };
+		914EAF75209011B000301F70 /* shop_wechat_icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF58209011B000301F70 /* shop_wechat_icon@2x.png */; };
+		914EAF76209011B000301F70 /* shop_wechat_icon@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF59209011B000301F70 /* shop_wechat_icon@3x.png */; };
+		914EAF7B209011B000301F70 /* XMallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF61209011B000301F70 /* XMallViewController.m */; };
+		914EAF7C209011B000301F70 /* XMallViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF62209011B000301F70 /* XMallViewController.xib */; };
+		914EAF7D209011B000301F70 /* XOrderPayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF64209011B000301F70 /* XOrderPayViewController.m */; };
+		914EAF7E209011B000301F70 /* XOrderPayViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF65209011B000301F70 /* XOrderPayViewController.xib */; };
+		914EAF7F209011B000301F70 /* XShopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF67209011B000301F70 /* XShopViewController.m */; };
+		914EAF80209011B000301F70 /* XShopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF68209011B000301F70 /* XShopViewController.xib */; };
+		914EAF96209012C800301F70 /* CartListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF83209012C800301F70 /* CartListTableViewCell.m */; };
+		914EAF97209012C800301F70 /* CartListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF84209012C800301F70 /* CartListTableViewCell.xib */; };
+		914EAF98209012C800301F70 /* XAddButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF86209012C800301F70 /* XAddButton.m */; };
+		914EAF99209012C800301F70 /* XButtonSingle.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF88209012C800301F70 /* XButtonSingle.m */; };
+		914EAF9A209012C800301F70 /* XCartOrderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF8A209012C800301F70 /* XCartOrderTableViewCell.m */; };
+		914EAF9B209012C800301F70 /* XCartOrderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF8B209012C800301F70 /* XCartOrderTableViewCell.xib */; };
+		914EAF9C209012C800301F70 /* XChangeImmediatelyNumTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF8D209012C800301F70 /* XChangeImmediatelyNumTableViewCell.m */; };
+		914EAF9D209012C800301F70 /* XChangeImmediatelyNumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF8E209012C800301F70 /* XChangeImmediatelyNumTableViewCell.xib */; };
+		914EAF9E209012C800301F70 /* XDelButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF90209012C800301F70 /* XDelButton.m */; };
+		914EAF9F209012C800301F70 /* XLogisticsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF92209012C800301F70 /* XLogisticsTableViewCell.m */; };
+		914EAFA0209012C800301F70 /* XLogisticsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAF93209012C800301F70 /* XLogisticsTableViewCell.xib */; };
+		914EAFA1209012C800301F70 /* XRemoveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAF95209012C800301F70 /* XRemoveButton.m */; };
+		914EAFA5209016CF00301F70 /* XAddressDefaultShowTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFA3209016CF00301F70 /* XAddressDefaultShowTableViewCell.m */; };
+		914EAFA6209016CF00301F70 /* XAddressDefaultShowTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAFA4209016CF00301F70 /* XAddressDefaultShowTableViewCell.xib */; };
+		914EAFA92090188A00301F70 /* ShopItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFA82090188A00301F70 /* ShopItem.m */; };
+		914EAFAC2090190F00301F70 /* DataRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFAA2090190F00301F70 /* DataRequestManager.m */; };
+		914EAFAF20901B0E00301F70 /* FanweMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFAD20901B0E00301F70 /* FanweMessage.m */; };
+		914EAFB320901D4D00301F70 /* PaymentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 914EAFB020901D4D00301F70 /* PaymentTableViewCell.xib */; };
+		914EAFB420901D4D00301F70 /* PaymentTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFB120901D4D00301F70 /* PaymentTableViewCell.m */; };
+		914EAFB7209021CA00301F70 /* APOrderInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFB5209021CA00301F70 /* APOrderInfo.m */; };
+		914EAFBA2090245C00301F70 /* APRSASigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFB92090245C00301F70 /* APRSASigner.m */; };
+		914EAFBC20902C7900301F70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 914EAFBB20902C7900301F70 /* Security.framework */; };
+		914EAFBF20902F3C00301F70 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 914EAFBE20902F3C00301F70 /* openssl_wrapper.m */; };
+		914EAFC22090306300301F70 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914EAFC02090306200301F70 /* libcrypto.a */; };
+		914EAFC32090306300301F70 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 914EAFC12090306300301F70 /* libssl.a */; };
 		915C6A362084BE8200AA16F7 /* CommodityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 915C6A352084BE8200AA16F7 /* CommodityViewController.m */; };
 		D745360D207B13C000B6C497 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = D745360A207B13C000B6C497 /* README.txt */; };
 		D745360E207B13C000B6C497 /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D745360C207B13C000B6C497 /* libWeChatSDK.a */; };
@@ -1172,6 +1217,70 @@
 		914EAF45208F37FF00301F70 /* APRoundedButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRoundedButton.m; sourceTree = "<group>"; };
 		914EAF47208F3A2100301F70 /* ASTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASTextField.m; sourceTree = "<group>"; };
 		914EAF48208F3A2200301F70 /* ASTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASTextField.h; sourceTree = "<group>"; };
+		914EAF4C209011B000301F70 /* basket@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basket@2x.png"; sourceTree = "<group>"; };
+		914EAF4D209011B000301F70 /* basket@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "basket@3x.png"; sourceTree = "<group>"; };
+		914EAF4E209011B000301F70 /* shop_alipay_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shop_alipay_icon.png; sourceTree = "<group>"; };
+		914EAF4F209011B000301F70 /* shop_alipay_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_alipay_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF50209011B000301F70 /* shop_area_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_area_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF51209011B000301F70 /* shop_area_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_area_icon@3x.png"; sourceTree = "<group>"; };
+		914EAF52209011B000301F70 /* shop_delete_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_delete_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF53209011B000301F70 /* shop_delete_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_delete_icon@3x.png"; sourceTree = "<group>"; };
+		914EAF54209011B000301F70 /* shop_edit_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_edit_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF55209011B000301F70 /* shop_edit_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_edit_icon@3x.png"; sourceTree = "<group>"; };
+		914EAF56209011B000301F70 /* shop_unfurled_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_unfurled_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF57209011B000301F70 /* shop_unfurled_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_unfurled_icon@3x.png"; sourceTree = "<group>"; };
+		914EAF58209011B000301F70 /* shop_wechat_icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_wechat_icon@2x.png"; sourceTree = "<group>"; };
+		914EAF59209011B000301F70 /* shop_wechat_icon@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_wechat_icon@3x.png"; sourceTree = "<group>"; };
+		914EAF60209011B000301F70 /* XMallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMallViewController.h; sourceTree = "<group>"; };
+		914EAF61209011B000301F70 /* XMallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMallViewController.m; sourceTree = "<group>"; };
+		914EAF62209011B000301F70 /* XMallViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMallViewController.xib; sourceTree = "<group>"; };
+		914EAF63209011B000301F70 /* XOrderPayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XOrderPayViewController.h; sourceTree = "<group>"; };
+		914EAF64209011B000301F70 /* XOrderPayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XOrderPayViewController.m; sourceTree = "<group>"; };
+		914EAF65209011B000301F70 /* XOrderPayViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XOrderPayViewController.xib; sourceTree = "<group>"; };
+		914EAF66209011B000301F70 /* XShopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XShopViewController.h; sourceTree = "<group>"; };
+		914EAF67209011B000301F70 /* XShopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XShopViewController.m; sourceTree = "<group>"; };
+		914EAF68209011B000301F70 /* XShopViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XShopViewController.xib; sourceTree = "<group>"; };
+		914EAF82209012C800301F70 /* CartListTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartListTableViewCell.h; sourceTree = "<group>"; };
+		914EAF83209012C800301F70 /* CartListTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartListTableViewCell.m; sourceTree = "<group>"; };
+		914EAF84209012C800301F70 /* CartListTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CartListTableViewCell.xib; sourceTree = "<group>"; };
+		914EAF85209012C800301F70 /* XAddButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAddButton.h; sourceTree = "<group>"; };
+		914EAF86209012C800301F70 /* XAddButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAddButton.m; sourceTree = "<group>"; };
+		914EAF87209012C800301F70 /* XButtonSingle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XButtonSingle.h; sourceTree = "<group>"; };
+		914EAF88209012C800301F70 /* XButtonSingle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XButtonSingle.m; sourceTree = "<group>"; };
+		914EAF89209012C800301F70 /* XCartOrderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XCartOrderTableViewCell.h; sourceTree = "<group>"; };
+		914EAF8A209012C800301F70 /* XCartOrderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XCartOrderTableViewCell.m; sourceTree = "<group>"; };
+		914EAF8B209012C800301F70 /* XCartOrderTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XCartOrderTableViewCell.xib; sourceTree = "<group>"; };
+		914EAF8C209012C800301F70 /* XChangeImmediatelyNumTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XChangeImmediatelyNumTableViewCell.h; sourceTree = "<group>"; };
+		914EAF8D209012C800301F70 /* XChangeImmediatelyNumTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XChangeImmediatelyNumTableViewCell.m; sourceTree = "<group>"; };
+		914EAF8E209012C800301F70 /* XChangeImmediatelyNumTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XChangeImmediatelyNumTableViewCell.xib; sourceTree = "<group>"; };
+		914EAF8F209012C800301F70 /* XDelButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XDelButton.h; sourceTree = "<group>"; };
+		914EAF90209012C800301F70 /* XDelButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XDelButton.m; sourceTree = "<group>"; };
+		914EAF91209012C800301F70 /* XLogisticsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLogisticsTableViewCell.h; sourceTree = "<group>"; };
+		914EAF92209012C800301F70 /* XLogisticsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLogisticsTableViewCell.m; sourceTree = "<group>"; };
+		914EAF93209012C800301F70 /* XLogisticsTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XLogisticsTableViewCell.xib; sourceTree = "<group>"; };
+		914EAF94209012C800301F70 /* XRemoveButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XRemoveButton.h; sourceTree = "<group>"; };
+		914EAF95209012C800301F70 /* XRemoveButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XRemoveButton.m; sourceTree = "<group>"; };
+		914EAFA2209016CE00301F70 /* XAddressDefaultShowTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAddressDefaultShowTableViewCell.h; sourceTree = "<group>"; };
+		914EAFA3209016CF00301F70 /* XAddressDefaultShowTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAddressDefaultShowTableViewCell.m; sourceTree = "<group>"; };
+		914EAFA4209016CF00301F70 /* XAddressDefaultShowTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XAddressDefaultShowTableViewCell.xib; sourceTree = "<group>"; };
+		914EAFA72090188A00301F70 /* ShopItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopItem.h; sourceTree = "<group>"; };
+		914EAFA82090188A00301F70 /* ShopItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopItem.m; sourceTree = "<group>"; };
+		914EAFAA2090190F00301F70 /* DataRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataRequestManager.m; sourceTree = "<group>"; };
+		914EAFAB2090190F00301F70 /* DataRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataRequestManager.h; sourceTree = "<group>"; };
+		914EAFAD20901B0E00301F70 /* FanweMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FanweMessage.m; sourceTree = "<group>"; };
+		914EAFAE20901B0E00301F70 /* FanweMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FanweMessage.h; sourceTree = "<group>"; };
+		914EAFB020901D4D00301F70 /* PaymentTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentTableViewCell.xib; sourceTree = "<group>"; };
+		914EAFB120901D4D00301F70 /* PaymentTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentTableViewCell.m; sourceTree = "<group>"; };
+		914EAFB220901D4D00301F70 /* PaymentTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentTableViewCell.h; sourceTree = "<group>"; };
+		914EAFB5209021CA00301F70 /* APOrderInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APOrderInfo.m; sourceTree = "<group>"; };
+		914EAFB6209021CA00301F70 /* APOrderInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APOrderInfo.h; sourceTree = "<group>"; };
+		914EAFB82090245C00301F70 /* APRSASigner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APRSASigner.h; sourceTree = "<group>"; };
+		914EAFB92090245C00301F70 /* APRSASigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APRSASigner.m; sourceTree = "<group>"; };
+		914EAFBB20902C7900301F70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		914EAFBD20902F3C00301F70 /* openssl_wrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = openssl_wrapper.h; sourceTree = "<group>"; };
+		914EAFBE20902F3C00301F70 /* openssl_wrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = openssl_wrapper.m; sourceTree = "<group>"; };
+		914EAFC02090306200301F70 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
+		914EAFC12090306300301F70 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
 		915C6A342084BE8200AA16F7 /* CommodityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommodityViewController.h; sourceTree = "<group>"; };
 		915C6A352084BE8200AA16F7 /* CommodityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommodityViewController.m; sourceTree = "<group>"; };
 		D7453608207B13C000B6C497 /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -1278,6 +1387,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D745481A20788FF4007BE40D /* CoreTelephony.framework in Frameworks */,
+				914EAFBC20902C7900301F70 /* Security.framework in Frameworks */,
+				914EAFC22090306300301F70 /* libcrypto.a in Frameworks */,
 				9137B6552080D3D000DD4C33 /* CoreMotion.framework in Frameworks */,
 				9137B6532080D3C400DD4C33 /* CFNetwork.framework in Frameworks */,
 				9137B6512080D3B300DD4C33 /* CoreText.framework in Frameworks */,
@@ -1286,9 +1398,9 @@
 				9114CB62207F29B500A2A26F /* Foundation.framework in Frameworks */,
 				9114CB60207F29A800A2A26F /* CoreGraphics.framework in Frameworks */,
 				9137B65A2080E4F100DD4C33 /* AlipaySDK.framework in Frameworks */,
+				914EAFC32090306300301F70 /* libssl.a in Frameworks */,
 				D745401E207BBC8500B6C497 /* libc++.tbd in Frameworks */,
 				D745481C20789002007BE40D /* QuartzCore.framework in Frameworks */,
-				D745481A20788FF4007BE40D /* CoreTelephony.framework in Frameworks */,
 				D745360E207B13C000B6C497 /* libWeChatSDK.a in Frameworks */,
 				D745481820788FE5007BE40D /* libsqlite3.0.tbd in Frameworks */,
 				D745481620788FD4007BE40D /* libz.tbd in Frameworks */,
@@ -1490,6 +1602,18 @@
 		9114CB6D207F69C100A2A26F /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				914EAFC02090306200301F70 /* libcrypto.a */,
+				914EAFC12090306300301F70 /* libssl.a */,
+				914EAFBD20902F3C00301F70 /* openssl_wrapper.h */,
+				914EAFBE20902F3C00301F70 /* openssl_wrapper.m */,
+				914EAFB82090245C00301F70 /* APRSASigner.h */,
+				914EAFB92090245C00301F70 /* APRSASigner.m */,
+				914EAFB6209021CA00301F70 /* APOrderInfo.h */,
+				914EAFB5209021CA00301F70 /* APOrderInfo.m */,
+				914EAFAE20901B0E00301F70 /* FanweMessage.h */,
+				914EAFAD20901B0E00301F70 /* FanweMessage.m */,
+				914EAFAB2090190F00301F70 /* DataRequestManager.h */,
+				914EAFAA2090190F00301F70 /* DataRequestManager.m */,
 				9114CB6E207F69C100A2A26F /* CommonMethod.h */,
 				9114CB6F207F69C100A2A26F /* CommonMethod.m */,
 				9137B6372080B1F500DD4C33 /* UIBarButtonItem+PGGExtension.h */,
@@ -1518,6 +1642,7 @@
 		9137B6392080B68000DD4C33 /* ShopCart */ = {
 			isa = PBXGroup;
 			children = (
+				914EAF4A209011B000301F70 /* YxShop */,
 				9137B63A2080B68000DD4C33 /* Controller */,
 				9137B63B2080B68000DD4C33 /* Model */,
 				9137B63C2080B68000DD4C33 /* View */,
@@ -1539,6 +1664,8 @@
 		9137B63B2080B68000DD4C33 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				914EAFA72090188A00301F70 /* ShopItem.h */,
+				914EAFA82090188A00301F70 /* ShopItem.m */,
 				9137B8272082125800DD4C33 /* DCRecommendItem.h */,
 				9137B8262082125700DD4C33 /* DCRecommendItem.m */,
 			);
@@ -3245,6 +3372,78 @@
 			path = CommonCustomView;
 			sourceTree = "<group>";
 		};
+		914EAF4A209011B000301F70 /* YxShop */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF81209012C800301F70 /* ShopCell */,
+				914EAF4B209011B000301F70 /* Img */,
+				914EAF60209011B000301F70 /* XMallViewController.h */,
+				914EAF61209011B000301F70 /* XMallViewController.m */,
+				914EAF62209011B000301F70 /* XMallViewController.xib */,
+				914EAF63209011B000301F70 /* XOrderPayViewController.h */,
+				914EAF64209011B000301F70 /* XOrderPayViewController.m */,
+				914EAF65209011B000301F70 /* XOrderPayViewController.xib */,
+				914EAF66209011B000301F70 /* XShopViewController.h */,
+				914EAF67209011B000301F70 /* XShopViewController.m */,
+				914EAF68209011B000301F70 /* XShopViewController.xib */,
+			);
+			path = YxShop;
+			sourceTree = "<group>";
+		};
+		914EAF4B209011B000301F70 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				914EAF4C209011B000301F70 /* basket@2x.png */,
+				914EAF4D209011B000301F70 /* basket@3x.png */,
+				914EAF4E209011B000301F70 /* shop_alipay_icon.png */,
+				914EAF4F209011B000301F70 /* shop_alipay_icon@2x.png */,
+				914EAF50209011B000301F70 /* shop_area_icon@2x.png */,
+				914EAF51209011B000301F70 /* shop_area_icon@3x.png */,
+				914EAF52209011B000301F70 /* shop_delete_icon@2x.png */,
+				914EAF53209011B000301F70 /* shop_delete_icon@3x.png */,
+				914EAF54209011B000301F70 /* shop_edit_icon@2x.png */,
+				914EAF55209011B000301F70 /* shop_edit_icon@3x.png */,
+				914EAF56209011B000301F70 /* shop_unfurled_icon@2x.png */,
+				914EAF57209011B000301F70 /* shop_unfurled_icon@3x.png */,
+				914EAF58209011B000301F70 /* shop_wechat_icon@2x.png */,
+				914EAF59209011B000301F70 /* shop_wechat_icon@3x.png */,
+			);
+			path = Img;
+			sourceTree = "<group>";
+		};
+		914EAF81209012C800301F70 /* ShopCell */ = {
+			isa = PBXGroup;
+			children = (
+				914EAFB220901D4D00301F70 /* PaymentTableViewCell.h */,
+				914EAFB120901D4D00301F70 /* PaymentTableViewCell.m */,
+				914EAFB020901D4D00301F70 /* PaymentTableViewCell.xib */,
+				914EAFA2209016CE00301F70 /* XAddressDefaultShowTableViewCell.h */,
+				914EAFA3209016CF00301F70 /* XAddressDefaultShowTableViewCell.m */,
+				914EAFA4209016CF00301F70 /* XAddressDefaultShowTableViewCell.xib */,
+				914EAF82209012C800301F70 /* CartListTableViewCell.h */,
+				914EAF83209012C800301F70 /* CartListTableViewCell.m */,
+				914EAF84209012C800301F70 /* CartListTableViewCell.xib */,
+				914EAF85209012C800301F70 /* XAddButton.h */,
+				914EAF86209012C800301F70 /* XAddButton.m */,
+				914EAF87209012C800301F70 /* XButtonSingle.h */,
+				914EAF88209012C800301F70 /* XButtonSingle.m */,
+				914EAF89209012C800301F70 /* XCartOrderTableViewCell.h */,
+				914EAF8A209012C800301F70 /* XCartOrderTableViewCell.m */,
+				914EAF8B209012C800301F70 /* XCartOrderTableViewCell.xib */,
+				914EAF8C209012C800301F70 /* XChangeImmediatelyNumTableViewCell.h */,
+				914EAF8D209012C800301F70 /* XChangeImmediatelyNumTableViewCell.m */,
+				914EAF8E209012C800301F70 /* XChangeImmediatelyNumTableViewCell.xib */,
+				914EAF8F209012C800301F70 /* XDelButton.h */,
+				914EAF90209012C800301F70 /* XDelButton.m */,
+				914EAF91209012C800301F70 /* XLogisticsTableViewCell.h */,
+				914EAF92209012C800301F70 /* XLogisticsTableViewCell.m */,
+				914EAF93209012C800301F70 /* XLogisticsTableViewCell.xib */,
+				914EAF94209012C800301F70 /* XRemoveButton.h */,
+				914EAF95209012C800301F70 /* XRemoveButton.m */,
+			);
+			path = ShopCell;
+			sourceTree = "<group>";
+		};
 		D7453607207B13C000B6C497 /* WechatSDK1.8.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -3537,6 +3736,7 @@
 		D745481220788FC6007BE40D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				914EAFBB20902C7900301F70 /* Security.framework */,
 				9137B6542080D3D000DD4C33 /* CoreMotion.framework */,
 				9137B6522080D3C300DD4C33 /* CFNetwork.framework */,
 				9137B6502080D3B300DD4C33 /* CoreText.framework */,
@@ -3661,16 +3861,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9137B8F620843D2700DD4C33 /* shareTerrace.plist in Resources */,
+				914EAFA0209012C800301F70 /* XLogisticsTableViewCell.xib in Resources */,
 				9137B6D62082036900DD4C33 /* DCVerificationView.xib in Resources */,
 				9137B8ED20843D2700DD4C33 /* RecommendShop.plist in Resources */,
 				9137B8E720843D2700DD4C33 /* CommentPic.plist in Resources */,
+				914EAF73209011B000301F70 /* shop_unfurled_icon@2x.png in Resources */,
 				9137B6592080E4F100DD4C33 /* AlipaySDK.bundle in Resources */,
+				914EAF6C209011B000301F70 /* shop_alipay_icon@2x.png in Resources */,
 				9137B7E52082107B00DD4C33 /* AddressTableViewCell.xib in Resources */,
 				9137B7DD2082107B00DD4C33 /* sqr_line@2x.png in Resources */,
+				914EAF7E209011B000301F70 /* XOrderPayViewController.xib in Resources */,
+				914EAF9B209012C800301F70 /* XCartOrderTableViewCell.xib in Resources */,
 				9137B6B72082034100DD4C33 /* DCUserAdressCell.xib in Resources */,
 				9137B8E920843D2700DD4C33 /* MessageNote.plist in Resources */,
 				9137B6B32082034100DD4C33 /* DCCenterServiceCell.xib in Resources */,
+				914EAF75209011B000301F70 /* shop_wechat_icon@2x.png in Resources */,
 				9137B6AE2082034100DD4C33 /* DCStateItemCell.xib in Resources */,
+				914EAF6A209011B000301F70 /* basket@3x.png in Resources */,
+				914EAFB320901D4D00301F70 /* PaymentTableViewCell.xib in Resources */,
 				9137B8F720843D2700DD4C33 /* ShopItem.plist in Resources */,
 				9137B8EC20843D2700DD4C33 /* YouLikeGoods.plist in Resources */,
 				9137B8F520843D2700DD4C33 /* FootprintGoods.plist in Resources */,
@@ -3681,18 +3889,25 @@
 				9137B85A2084334000DD4C33 /* Info.plist in Resources */,
 				9137B8202082118C00DD4C33 /* SVProgressHUD.bundle in Resources */,
 				9137B6B92082034100DD4C33 /* DCUserMgCell.xib in Resources */,
+				914EAF6E209011B000301F70 /* shop_area_icon@3x.png in Resources */,
+				914EAF97209012C800301F70 /* CartListTableViewCell.xib in Resources */,
 				9137B7F52082107B00DD4C33 /* line.png in Resources */,
 				9137B6A02082034100DD4C33 /* DCNewAdressViewController.xib in Resources */,
 				D74547EA2075BEEE007BE40D /* Assets.xcassets in Resources */,
 				9137B8F320843D2700DD4C33 /* DetailRecommend.plist in Resources */,
+				914EAF6D209011B000301F70 /* shop_area_icon@2x.png in Resources */,
 				9137B8DE20843D2700DD4C33 /* moveupAndDown@2x.gif in Resources */,
 				9137B8EF20843D2700DD4C33 /* ClassiftyGoods01.plist in Resources */,
 				9137B7F62082107B00DD4C33 /* mask.jpg in Resources */,
 				9137B8E820843D2700DD4C33 /* DeliveryAdress.plist in Resources */,
+				914EAF70209011B000301F70 /* shop_delete_icon@3x.png in Resources */,
 				9137B8E020843D2700DD4C33 /* BeautyRecommendShop.plist in Resources */,
 				9137B8EB20843D2700DD4C33 /* MyServiceFlow.plist in Resources */,
+				914EAF76209011B000301F70 /* shop_wechat_icon@3x.png in Resources */,
 				9137B7D22082107B00DD4C33 /* addressData.plist in Resources */,
+				914EAF80209011B000301F70 /* XShopViewController.xib in Resources */,
 				D74540E0207BBDA000B6C497 /* Info.plist in Resources */,
+				914EAF72209011B000301F70 /* shop_edit_icon@3x.png in Resources */,
 				9137B8E320843D2700DD4C33 /* GoodsGrid.plist in Resources */,
 				9137B6D12082036900DD4C33 /* DCLoginViewController.xib in Resources */,
 				D745360D207B13C000B6C497 /* README.txt in Resources */,
@@ -3700,11 +3915,13 @@
 				9137B9202084434C00DD4C33 /* TZImagePickerController.bundle in Resources */,
 				D74540D4207BBDA000B6C497 /* Info.plist in Resources */,
 				9114CB4A207CC10800A2A26F /* MJRefresh.bundle in Resources */,
+				914EAF6F209011B000301F70 /* shop_delete_icon@2x.png in Resources */,
 				9137B7DB2082107B00DD4C33 /* flsah_normal@2x.png in Resources */,
 				9137B8E220843D2700DD4C33 /* CountDownShop.plist in Resources */,
 				9137B8E420843D2700DD4C33 /* HomeHighGoods.plist in Resources */,
 				9137B8DF20843D2700DD4C33 /* T1cdxgB5_T1RCvBVdK.gif in Resources */,
 				914D9DA8208D7A6B005A5626 /* DCHeaderReusableView.xib in Resources */,
+				914EAF74209011B000301F70 /* shop_unfurled_icon@3x.png in Resources */,
 				9137B6D42082036900DD4C33 /* DCAccountPsdView.xib in Resources */,
 				9137B8F120843D2700DD4C33 /* ClassiftyGoods03.plist in Resources */,
 				9137B8EE20843D2700DD4C33 /* ClasiftyGoods.plist in Resources */,
@@ -3714,15 +3931,21 @@
 				9137B8E520843D2700DD4C33 /* CommentBadData.plist in Resources */,
 				914D9D9F208D7A6B005A5626 /* DCCommentsCntCell.xib in Resources */,
 				914EAF27208EB85300301F70 /* IQKeyboardManager.bundle in Resources */,
+				914EAF69209011B000301F70 /* basket@2x.png in Resources */,
 				9137B8DD20843D2700DD4C33 /* loading2.gif in Resources */,
 				9137B7DC2082107B00DD4C33 /* navigationbarScanBg.png in Resources */,
 				9137B7F72082107B00DD4C33 /* restrictedshine.tiff in Resources */,
 				914EAF41208F366D00301F70 /* ForgotViewController.xib in Resources */,
+				914EAF6B209011B000301F70 /* shop_alipay_icon.png in Resources */,
+				914EAF71209011B000301F70 /* shop_edit_icon@2x.png in Resources */,
 				9137B6B12082034100DD4C33 /* DCCenterBackCell.xib in Resources */,
 				9137B6A72082034100DD4C33 /* DCMyCenterHeaderView.xib in Resources */,
 				9137B8DC20843D2700DD4C33 /* loading.gif in Resources */,
+				914EAF7C209011B000301F70 /* XMallViewController.xib in Resources */,
+				914EAF9D209012C800301F70 /* XChangeImmediatelyNumTableViewCell.xib in Resources */,
 				9137B6AB2082034100DD4C33 /* DCUserMgHeadView.xib in Resources */,
 				9137B8E120843D2700DD4C33 /* BeautyShop.plist in Resources */,
+				914EAFA6209016CF00301F70 /* XAddressDefaultShowTableViewCell.xib in Resources */,
 				9137B6B52082034100DD4C33 /* DCCenterBeaShopCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3775,7 +3998,9 @@
 				9137B70420820E1000DD4C33 /* DCExceedApplianceCell.m in Sources */,
 				9137B9282084434C00DD4C33 /* UIView+Layout.m in Sources */,
 				D74540D1207BBDA000B6C497 /* NSObject+MJClass.m in Sources */,
+				914EAFB7209021CA00301F70 /* APOrderInfo.m in Sources */,
 				9114CB0B207CC0F200A2A26F /* UIView+WebCache.m in Sources */,
+				914EAFA5209016CF00301F70 /* XAddressDefaultShowTableViewCell.m in Sources */,
 				9114CB46207CC10800A2A26F /* MJRefreshBackStateFooter.m in Sources */,
 				9137B8742084374B00DD4C33 /* DCHandPickViewController.m in Sources */,
 				9137B7D72082107B00DD4C33 /* DCScanIdentifyAreaView.m in Sources */,
@@ -3783,6 +4008,7 @@
 				D745410B207BBDA000B6C497 /* YXFindViewController.m in Sources */,
 				914D9DA9208D7A6B005A5626 /* DCSildeBarView.m in Sources */,
 				D74540CC207BBDA000B6C497 /* NSObject+MJKeyValue.m in Sources */,
+				914EAF96209012C800301F70 /* CartListTableViewCell.m in Sources */,
 				D74540C8207BBDA000B6C497 /* UIViewExt.m in Sources */,
 				914EAF3A208F35D300301F70 /* orderInfoModel.m in Sources */,
 				914D9DC9208D7A6B005A5626 /* DCFeatureChoseTopCell.m in Sources */,
@@ -3793,6 +4019,7 @@
 				9137B6A12082034100DD4C33 /* DCReceivingAddressViewController.m in Sources */,
 				914D9DBA208D7A6B005A5626 /* DCCommentHeaderCell.m in Sources */,
 				9137B8092082107B00DD4C33 /* XWFilterAnimator+XWMask.m in Sources */,
+				914EAF9C209012C800301F70 /* XChangeImmediatelyNumTableViewCell.m in Sources */,
 				9114CB40207CC10800A2A26F /* MJRefreshHeader.m in Sources */,
 				9137B8132082107B00DD4C33 /* YBRectConst.m in Sources */,
 				9114CB07207CC0F200A2A26F /* UIImage+MultiFormat.m in Sources */,
@@ -3811,6 +4038,8 @@
 				9137B6D72082036900DD4C33 /* DCNewFeatureViewController.m in Sources */,
 				9137B69D2082034100DD4C33 /* DCMyCenterViewController.m in Sources */,
 				9137B64A2080CB0B00DD4C33 /* YXSearchView.m in Sources */,
+				914EAFB420901D4D00301F70 /* PaymentTableViewCell.m in Sources */,
+				914EAF9E209012C800301F70 /* XDelButton.m in Sources */,
 				9114CB3C207CC10800A2A26F /* MJRefreshAutoFooter.m in Sources */,
 				9137B7C82082107B00DD4C33 /* DCLIRLButton.m in Sources */,
 				914D9DAC208D7A6B005A5626 /* DCGoodDetailViewController.m in Sources */,
@@ -3865,6 +4094,7 @@
 				9137B6AD2082034100DD4C33 /* DCStateItemCell.m in Sources */,
 				9137B70720820E1000DD4C33 /* DCGoodsHandheldCell.m in Sources */,
 				914EAF22208EB85300301F70 /* IQBarButtonItem.m in Sources */,
+				914EAFBA2090245C00301F70 /* APRSASigner.m in Sources */,
 				9137B86C2084352500DD4C33 /* TAAnimatedDotView.m in Sources */,
 				914EAF25208EB85300301F70 /* IQToolbar.m in Sources */,
 				9114CB4C207CC10800A2A26F /* NSBundle+MJRefresh.m in Sources */,
@@ -3873,6 +4103,7 @@
 				914D9DBD208D7A6B005A5626 /* DCPartCommentHeadView.m in Sources */,
 				9137B8A32084395900DD4C33 /* DCFootprintCell.m in Sources */,
 				914EAF26208EB85300301F70 /* IQUIView+IQKeyboardToolbar.m in Sources */,
+				914EAF9F209012C800301F70 /* XLogisticsTableViewCell.m in Sources */,
 				914D9DC1208D7A6B005A5626 /* DCShowTypeThreeCell.m in Sources */,
 				9114CB48207CC10800A2A26F /* MJRefreshNormalHeader.m in Sources */,
 				D74540D5207BBDA000B6C497 /* MJFoundation.m in Sources */,
@@ -3885,6 +4116,7 @@
 				914EAF1A208EB85300301F70 /* IQNSArray+Sort.m in Sources */,
 				9137B7DE2082107B00DD4C33 /* DCTitleRolling.m in Sources */,
 				9114CB0A207CC0F200A2A26F /* UIImageView+WebCache.m in Sources */,
+				914EAFA92090188A00301F70 /* ShopItem.m in Sources */,
 				9114CB47207CC10800A2A26F /* MJRefreshGifHeader.m in Sources */,
 				9137B6B82082034100DD4C33 /* DCUserMgCell.m in Sources */,
 				9137B84520821BD600DD4C33 /* DCBaseSetViewController.m in Sources */,
@@ -3895,6 +4127,7 @@
 				D7454105207BBDA000B6C497 /* AFSecurityPolicy.m in Sources */,
 				9137B6D52082036900DD4C33 /* DCVerificationView.m in Sources */,
 				9137B70B20820E1000DD4C33 /* DCOverFootView.m in Sources */,
+				914EAF7D209011B000301F70 /* XOrderPayViewController.m in Sources */,
 				9137B9232084434C00DD4C33 /* TZPhotoPickerController.m in Sources */,
 				9137B6A52082034100DD4C33 /* DCCenterTopToolView.m in Sources */,
 				9137B7D92082107B00DD4C33 /* DCScanTool.m in Sources */,
@@ -3914,6 +4147,7 @@
 				914EAF39208F35D300301F70 /* orderGroup.m in Sources */,
 				9137B91C2084434C00DD4C33 /* TZAssetModel.m in Sources */,
 				9137B8AB2084395900DD4C33 /* DCHoverFlowLayout.m in Sources */,
+				914EAF99209012C800301F70 /* XButtonSingle.m in Sources */,
 				9137B7C72082107B00DD4C33 /* DCCustionButton.m in Sources */,
 				9137B8032082107B00DD4C33 /* XWCoolAnimator.m in Sources */,
 				9137B6AF2082034100DD4C33 /* DCStateItemFooterView.m in Sources */,
@@ -3969,10 +4203,12 @@
 				914EAF20208EB85300301F70 /* IQKeyboardReturnKeyHandler.m in Sources */,
 				9137B86E2084352500DD4C33 /* TAPageControl.m in Sources */,
 				D74547E22075BEEE007BE40D /* AppDelegate.m in Sources */,
+				914EAF7F209011B000301F70 /* XShopViewController.m in Sources */,
 				9137B830208212AC00DD4C33 /* DCRecommendCell.m in Sources */,
 				9137B7E82082107B00DD4C33 /* CitiesDataTool.m in Sources */,
 				914DA076208D889700EBF167 /* DCPagerProgressView.m in Sources */,
 				9137B7EE2082107B00DD4C33 /* PPNumberButton.m in Sources */,
+				914EAFBF20902F3C00301F70 /* openssl_wrapper.m in Sources */,
 				914D9DA3208D7A6B005A5626 /* DCContentItem.m in Sources */,
 				914D9DBF208D7A6B005A5626 /* DCShowTypeFourCell.m in Sources */,
 				914DA077208D889700EBF167 /* UIView+DCPagerFrame.m in Sources */,
@@ -4033,9 +4269,11 @@
 				9137B70D20820E1000DD4C33 /* DCTopLineFootView.m in Sources */,
 				9137B70620820E1000DD4C33 /* DCGoodsGridCell.m in Sources */,
 				9114CAEF207CC0F200A2A26F /* FLAnimatedImageView+WebCache.m in Sources */,
+				914EAF9A209012C800301F70 /* XCartOrderTableViewCell.m in Sources */,
 				914D9DC5208D7A6B005A5626 /* DCDetailServicetCell.m in Sources */,
 				9137B6382080B1F500DD4C33 /* UIBarButtonItem+PGGExtension.m in Sources */,
 				914DA08E208D8E4400EBF167 /* SDWaitingView.m in Sources */,
+				914EAFA1209012C800301F70 /* XRemoveButton.m in Sources */,
 				9137B9252084434C00DD4C33 /* TZPhotoPreviewController.m in Sources */,
 				914D9DAB208D7A6B005A5626 /* DCParticularsShowViewController.m in Sources */,
 				914EAF42208F366D00301F70 /* ForgotViewController.m in Sources */,
@@ -4075,16 +4313,19 @@
 				9137B70A20820E1000DD4C33 /* DCNewWelfareCell.m in Sources */,
 				914D9DA7208D7A6B005A5626 /* DCHeaderReusableView.m in Sources */,
 				9137B7CA2082107B00DD4C33 /* DCZuoWenRightButton.m in Sources */,
+				914EAF7B209011B000301F70 /* XMallViewController.m in Sources */,
 				9137B7D42082107B00DD4C33 /* UIPlaceHolderTextView.m in Sources */,
 				914D9DC4208D7A6B005A5626 /* DCDetailLikeItemCell.m in Sources */,
 				9114CB74207F6A3B00A2A26F /* FHTabBarController.m in Sources */,
 				9137B7E22082107B00DD4C33 /* AddressItem.m in Sources */,
 				9137B8582084334000DD4C33 /* FMDatabaseQueue.m in Sources */,
+				914EAFAF20901B0E00301F70 /* FanweMessage.m in Sources */,
 				9137B8A92084395900DD4C33 /* DCColonInsView.m in Sources */,
 				D74547DF2075BEEE007BE40D /* main.m in Sources */,
 				914D9DB3208D7A6B005A5626 /* DCDetailOverFooterView.m in Sources */,
 				9137B7E02082107B00DD4C33 /* CDDTopTip.m in Sources */,
 				914EAF46208F37FF00301F70 /* APRoundedButton.m in Sources */,
+				914EAFAC2090190F00301F70 /* DataRequestManager.m in Sources */,
 				9114CB3F207CC10800A2A26F /* MJRefreshFooter.m in Sources */,
 				9114CB01207CC0F200A2A26F /* SDWebImagePrefetcher.m in Sources */,
 				9137B91D2084434C00DD4C33 /* TZGifPhotoPreviewController.m in Sources */,
@@ -4096,6 +4337,7 @@
 				9114CB44207CC10800A2A26F /* MJRefreshBackGifFooter.m in Sources */,
 				9137B6A62082034100DD4C33 /* DCMyCenterHeaderView.m in Sources */,
 				9137B92F208445AB00DD4C33 /* UIColor+DCColorChange.m in Sources */,
+				914EAF98209012C800301F70 /* XAddButton.m in Sources */,
 				914EAF1E208EB85300301F70 /* IQUIViewController+Additions.m in Sources */,
 				D7454100207BBDA000B6C497 /* AFURLResponseSerialization.m in Sources */,
 				D74540DF207BBDA000B6C497 /* MASViewAttribute.m in Sources */,
@@ -4238,13 +4480,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HomeFarm/HomeFarm.pch;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/HomeFarm";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/HomeFarm",
+					"$(SRCROOT)/HomeFarm/openssl",
+				);
 				INFOPLIST_FILE = HomeFarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HomeFarm/WechatSDK1.8.2",
+					"$(PROJECT_DIR)/HomeFarm/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarm;
@@ -4265,13 +4511,17 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = HomeFarm/HomeFarm.pch;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)/HomeFarm";
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/HomeFarm",
+					"$(SRCROOT)/HomeFarm/openssl",
+				);
 				INFOPLIST_FILE = HomeFarm/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/HomeFarm/WechatSDK1.8.2",
+					"$(PROJECT_DIR)/HomeFarm/Tool",
 				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yixin.HomeFarm;

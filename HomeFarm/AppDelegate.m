@@ -134,6 +134,7 @@
     return YES;
 }
 
+
 #pragma mark - 当APP接收到内存警告的时候
 - (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
 {

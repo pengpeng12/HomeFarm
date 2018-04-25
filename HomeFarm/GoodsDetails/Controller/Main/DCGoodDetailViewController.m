@@ -198,7 +198,7 @@
 #pragma mark - 底部按钮(收藏 购物车 加入购物车 立即购买)
 - (void)setUpBottomButton
 {
-    [self setUpLeftTwoButton];//收藏 购物车
+//    [self setUpLeftTwoButton];//收藏 购物车
     
     [self setUpRightTwoButton];//加入购物车 立即购买
 }
@@ -209,7 +209,7 @@
     NSArray *imagesSel = @[@"tabr_07shoucang_down",@"tabr_08gouwuche"];
     CGFloat buttonW = kScreen_Width * 0.2;
     CGFloat buttonH = 50;
-    CGFloat buttonY = kScreen_Height - buttonH;
+    CGFloat buttonY = kScreen_Height- DCTopNavH - buttonH;
     
     for (NSInteger i = 0; i < imagesNor.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -228,9 +228,9 @@
 - (void)setUpRightTwoButton
 {
     NSArray *titles = @[@"加入购物车",@"立即购买"];
-    CGFloat buttonW = kScreen_Width * 0.6 * 0.5;
+    CGFloat buttonW = kScreen_Width * 0.5;
     CGFloat buttonH = 50;
-    CGFloat buttonY = kScreen_Height - buttonH;
+    CGFloat buttonY = kScreen_Height - DCTopNavH - buttonH;
     for (NSInteger i = 0; i < titles.count; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         button.titleLabel.font = PFR16Font;
@@ -239,7 +239,7 @@
         [button setTitle:titles[i] forState:UIControlStateNormal];
         button.backgroundColor = (i == 0) ? [UIColor redColor] : RGB(249, 125, 10);
         [button addTarget:self action:@selector(bottomButtonClick:) forControlEvents:UIControlEventTouchUpInside];
-        CGFloat buttonX = kScreen_Width * 0.4 + (buttonW * i);
+        CGFloat buttonX = buttonW * i;
         button.frame = CGRectMake(buttonX, buttonY, buttonW, buttonH);
         
         [self.view addSubview:button];
@@ -299,14 +299,14 @@
 - (void)bottomButtonClick:(UIButton *)button
 {
     if (button.tag == 0) {
-        NSLog(@"收藏");
-        button.selected = !button.selected;
+//        NSLog(@"收藏");
+//        button.selected = !button.selected;
     }else if(button.tag == 1){
-        NSLog(@"购物车");
-        DCMyTrolleyViewController *shopCarVc = [[DCMyTrolleyViewController alloc] init];
-        shopCarVc.isTabBar = YES;
-        shopCarVc.title = @"购物车";
-        [self.navigationController pushViewController:shopCarVc animated:YES];
+//        NSLog(@"购物车");
+//        DCMyTrolleyViewController *shopCarVc = [[DCMyTrolleyViewController alloc] init];
+//        shopCarVc.isTabBar = YES;
+//        shopCarVc.title = @"购物车";
+//        [self.navigationController pushViewController:shopCarVc animated:YES];
     }else  if (button.tag == 2 || button.tag == 3) { //父控制器的加入购物车和立即购买
         //异步发通知
         dispatch_sync(dispatch_get_global_queue(0, 0), ^{
